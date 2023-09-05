@@ -1,0 +1,115 @@
+@use '../base' as *;
+
+// --------------------------------
+
+// (START) Global editor code https://codyhouse.co/ds/globals/colors
+
+// --------------------------------
+
+:root, [data-theme="default"] {
+  // main
+  @include defineColorHSL(--color-primary-darker, 16, 59%, 10%);
+  @include defineColorHSL(--color-primary-dark, 16, 59%, 16%);
+  @include defineColorHSL(--color-primary, 16, 59%, 22%);
+  @include defineColorHSL(--color-primary-light, 16, 59%, 28%);
+  @include defineColorHSL(--color-primary-lighter, 16, 59%, 34%);
+
+  @include defineColorHSL(--color-accent-darker, 47, 65%, 42%);
+  @include defineColorHSL(--color-accent-dark, 47, 65%, 48%);
+  @include defineColorHSL(--color-accent, 47, 65%, 54%);
+  @include defineColorHSL(--color-accent-light, 47, 65%, 60%);
+  @include defineColorHSL(--color-accent-lighter, 47, 65%, 66%);
+
+  @include defineColorHSL(--color-black, 230, 13%, 9%);
+  @include defineColorHSL(--color-white, 60, 6%, 97%);
+
+  // feedback
+  @include defineColorHSL(--color-warning-darker, 35, 79%, 48%);
+  @include defineColorHSL(--color-warning-dark, 35, 79%, 56%);
+  @include defineColorHSL(--color-warning, 35, 79%, 66%);
+  @include defineColorHSL(--color-warning-light, 35, 79%, 74%);
+  @include defineColorHSL(--color-warning-lighter, 35, 79%, 82%);
+
+  @include defineColorHSL(--color-success-darker, 134, 30%, 0%);
+  @include defineColorHSL(--color-success-dark, 134, 30%, 8%);
+  @include defineColorHSL(--color-success, 134, 30%, 15%);
+  @include defineColorHSL(--color-success-light, 134, 30%, 21%);
+  @include defineColorHSL(--color-success-lighter, 134, 30%, 27%);
+
+  @include defineColorHSL(--color-error-darker, 0, 89%, 0%);
+  @include defineColorHSL(--color-error-dark, 0, 89%, 8%);
+  @include defineColorHSL(--color-error, 0, 89%, 17%);
+  @include defineColorHSL(--color-error-light, 0, 89%, 23%);
+  @include defineColorHSL(--color-error-lighter, 0, 89%, 29%);
+
+  // background
+  @include defineColorHSL(--color-bg-darker, 180, 1%, 16%);
+  @include defineColorHSL(--color-bg-dark, 0, 0%, 19%);
+  @include defineColorHSL(--color-bg, 0, 0%, 22%);
+  @include defineColorHSL(--color-bg-light, 0, 0%, 25%);
+  @include defineColorHSL(--color-bg-lighter, 180, 1%, 28%);
+
+  // color contrasts
+  @include defineColorHSL(--color-contrast-lower, 180, 1%, 31%);
+  @include defineColorHSL(--color-contrast-low, 180, 0%, 44%);
+  @include defineColorHSL(--color-contrast-medium, 180, 0%, 57%);
+  @include defineColorHSL(--color-contrast-high, 180, 1%, 77%);
+  @include defineColorHSL(--color-contrast-higher, 180, 4%, 91%);
+}
+
+[data-theme="dark"] {
+  // main
+  @include defineColorHSL(--color-primary-darker, 250, 100%, 60%);
+  @include defineColorHSL(--color-primary-dark, 250, 100%, 64%);
+  @include defineColorHSL(--color-primary, 250, 100%, 69%);
+  @include defineColorHSL(--color-primary-light, 250, 100%, 72%);
+  @include defineColorHSL(--color-primary-lighter, 250, 100%, 76%);
+
+  @include defineColorHSL(--color-accent-darker, 342, 92%, 41%);
+  @include defineColorHSL(--color-accent-dark, 342, 92%, 47%);
+  @include defineColorHSL(--color-accent, 342, 92%, 54%);
+  @include defineColorHSL(--color-accent-light, 342, 92%, 60%);
+  @include defineColorHSL(--color-accent-lighter, 342, 92%, 65%);
+
+  @include defineColorHSL(--color-black, 230, 13%, 9%);
+  @include defineColorHSL(--color-white, 0, 0%, 100%);
+
+  // feedback
+  @include defineColorHSL(--color-warning-darker, 35, 79%, 48%);
+  @include defineColorHSL(--color-warning-dark, 35, 79%, 56%);
+  @include defineColorHSL(--color-warning, 35, 79%, 66%);
+  @include defineColorHSL(--color-warning-light, 35, 79%, 74%);
+  @include defineColorHSL(--color-warning-lighter, 35, 79%, 82%);
+
+  @include defineColorHSL(--color-success-darker, 170, 78%, 26%);
+  @include defineColorHSL(--color-success-dark, 170, 78%, 31%);
+  @include defineColorHSL(--color-success, 170, 78%, 36%);
+  @include defineColorHSL(--color-success-light, 170, 78%, 42%);
+  @include defineColorHSL(--color-success-lighter, 170, 78%, 47%);
+
+  @include defineColorHSL(--color-error-darker, 342, 92%, 41%);
+  @include defineColorHSL(--color-error-dark, 342, 92%, 47%);
+  @include defineColorHSL(--color-error, 342, 92%, 54%);
+  @include defineColorHSL(--color-error-light, 342, 92%, 60%);
+  @include defineColorHSL(--color-error-lighter, 342, 92%, 65%);
+
+  // background
+  @include defineColorHSL(--color-bg-darker, 232, 7%, 8%);
+  @include defineColorHSL(--color-bg-dark, 233, 8%, 11%);
+  @include defineColorHSL(--color-bg, 232, 11%, 15%);
+  @include defineColorHSL(--color-bg-light, 233, 8%, 19%);
+  @include defineColorHSL(--color-bg-lighter, 232, 7%, 22%);
+
+  // color contrasts
+  @include defineColorHSL(--color-contrast-lower, 240, 6%, 26%);
+  @include defineColorHSL(--color-contrast-low, 240, 3%, 41%);
+  @include defineColorHSL(--color-contrast-medium, 213, 3%, 57%);
+  @include defineColorHSL(--color-contrast-high, 240, 5%, 82%);
+  @include defineColorHSL(--color-contrast-higher, 240, 100%, 99%);
+}
+
+// --------------------------------
+
+// (END) Global editor code
+
+// --------------------------------

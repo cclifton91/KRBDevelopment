@@ -1,0 +1,25 @@
+@use '../base' as *;
+
+/* -------------------------------- 
+
+File#: _1_feature-v2
+Title: Feature v2
+Descr: Content group containing two text components
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+.feature-v2 {}
+
+.feature-v2__label {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: center;
+
+  &::after {
+    content: '';
+    height: 1px;
+    flex-grow: 1;
+    background-color: alpha(var(--color-contrast-higher), 0.1);
+  }
+}

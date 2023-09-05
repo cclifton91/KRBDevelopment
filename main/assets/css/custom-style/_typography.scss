@@ -1,0 +1,121 @@
+@use '../base' as *;
+
+// --------------------------------
+
+// (START) Global editor code https://codyhouse.co/ds/globals/typography
+
+// --------------------------------
+
+:root {
+  // font family
+  --font-primary: 'Questrial', sans-serif;
+  --font-secondary: Regular 400 at 48px Whereas a common understanding of these rights and freedoms is Regular 400 at 36px No one shall be held in slavery or servitude slavery and the slave trade shall be prohibited in all their forms. Regular 400 at 32px Everyone has the right to an effective remedy by the competent national tribunals for acts violating the fundamental rights granted him by the constitution or by law. Regular 400 at 21px No one shall be subjected to arbitrary arrest, detention or exile. Everyone is entitled in full equality to a fair and public hearing by an independent and impartial tribunal, in the determination of his rights and obligations and of any criminal charge against him. No one shall be subjected to arbitrary interference with his privacy, family, home or correspondence, nor to attacks upon his honour and reputation. Everyone has the right to the protection of the law against such interference or attacks. Regular 400 at 16px Everyone has the right to freedom of thought, conscience and religion this right includes freedom to change his religion or belief, and freedom, either alone or in community with others and in public or private, to manifest his religion or belief in teaching, practice, worship and observance. Everyone has the right to freedom of opinion and expression this right includes freedom to hold opinions without interference and to seek, receive and impart information and ideas through any media and regardless of frontiers. Everyone has the right to rest and leisure, including reasonable limitation of working hours and periodic holidays with pay. Choosing type  When you have some text, how can you choose a typeface? Many people—professional designers included—go through an app’s font menu until we find one we like. But the aim of this module is to show that there are many considerations that can improve our type choices. By setting some useful constraints to aid our type selection, we can also develop a critical eye for analyzing type along the way.  A checklist for choosing type  Emotive considerations for choosing typefaces  Choosing reliable typefaces  Exploring typefaces with multiple weights or grades  Exploring width in type  Choosing typefaces that have optical sizes  Pairing typefaces  Pairing typefaces within a family & superfamily  Pairing typefaces by the same type designer or type foundry  Pairing typefaces using the font matrix  Exploring x-height & the em square  Adding fonts to Google Docs and Slides Google Fonts is a library of 1562 open source font families and APIs for convenient use via CSS and Android. The library also has delightful and beautifully crafted icons for common actions and items. Download them for use in your digital products for Android, iOS, and web.      Fonts     Icons     About us     Featured     Noto Fonts     Knowledge       Fonts GitHub     Icons GitHub     Material Design     Google Design     Twitter     Fonts blog   Privacy Terms of service Selected families Review Montserrat  Questrial  Use on the web  To embed a font, copy the code into the <head> of your html <link> @import <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300400700&family=Questrial&display=swap" rel="stylesheet">  CSS rules to specify families       'Montserrat', sans-serif;
+
+  // font size
+  --text-base-size: 1rem; // body font-size
+  --text-scale-ratio: 1.2; // multiplier used to generate the type scale values 👇
+  
+  // line-height
+  --body-line-height: 1.4;
+  --heading-line-height: 1.2;
+  
+  // capital letters - used in combo with the lhCrop mixin
+  --font-primary-capital-letter: 1;
+  --font-secondary-capital-letter: 1;
+
+  // unit - don't modify unless you want to change the typography unit (e.g., from Rem to Em units)
+  --text-unit: var(--text-base-size); // if Em units → --text-unit: 1em;
+}
+
+:root, * {
+  // type scale
+  --text-xs: calc((var(--text-unit) / var(--text-scale-ratio)) / var(--text-scale-ratio));
+  --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
+  --text-md: calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
+  --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
+  --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
+  --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
+  --text-xxxxl: calc(var(--text-xxxl) * var(--text-scale-ratio));
+}
+
+
+@include breakpoint(md) {
+  :root {
+    --text-base-size: 1.125rem;
+    --text-scale-ratio: 1.215;
+  }
+}
+
+body {
+  font-family: var(--font-secondary);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-primary);
+  --heading-font-weight: 700;
+}
+
+// font family
+.font-primary { font-family: var(--font-primary); }
+.font-secondary { font-family: var(--font-secondary); }
+
+// --------------------------------
+
+// (END) Global editor code
+
+// --------------------------------
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.link {
+  text-decoration: none;
+  background-image: linear-gradient(to right, currentColor 50%, alpha(var(--color-contrast-higher), 0.15) 50%);
+  background-size: 200% 1px;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  transition: background-position 0.2s;
+
+  &:hover {
+    background-position: 0% 100%;
+  }
+}
+
+mark {
+  background-color: alpha(var(--color-accent), 0.2);
+  color: inherit;
+}
+
+.text-component {
+  --line-height-multiplier: 1;
+  --text-space-y-multiplier: 1;
+  
+  > * { // use Em units
+    --text-unit: 1em;
+    --space-unit: 1em;
+  }
+
+  blockquote {
+    padding-left: 1em;
+    border-left: 4px solid var(--color-contrast-lower);
+    font-style: italic;
+  }
+
+  hr {
+    background: var(--color-contrast-lower);
+    height: 1px;
+  }
+
+  figcaption {
+    font-size: var(--text-sm);
+    color: var(--color-contrast-low);
+  }
+}
+
+.article { // e.g., blog posts
+  --body-line-height: 1.58; // set body line-height
+  --text-space-y-multiplier: 1.2; // control vertical spacing
+}

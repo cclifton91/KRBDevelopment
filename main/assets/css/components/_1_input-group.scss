@@ -1,0 +1,78 @@
+@use '../base' as *;
+
+/* -------------------------------- 
+
+File#: _1_input-group
+Title: Input Group
+Descr: A group of connected form elements, distributed on a single row
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+.input-group {
+  display: flex;
+
+  > * {
+    position: relative;
+  }
+
+  > *:not(:last-child):not(:first-child) {
+    border-radius: 0;
+  }
+
+  > *:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+    .select__input {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  > *:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    .select__input {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  > *:focus, *:focus-within {
+    z-index: 1;
+  }
+}
+
+.input-group__tag {
+  display: flex;
+  align-items: center;
+
+  padding: 0 var(--space-sm);
+  background-color: var(--color-bg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-contrast-lower);
+
+  white-space: nowrap;
+  color: var(--color-contrast-medium);
+
+  &:first-child {
+    border-right-width: 0px;
+  }
+
+  &:last-child {
+    border-left-width: 0px;
+  }
+}
+
+/* custom select */
+.input-group .select {
+  --select-icon-size: 16px;
+  --select-icon-right-margin: var(--space-sm); // icon margin right
+  --select-text-icon-gap: var(--space-xxxs); // gap between text and icon
+
+  .input-group__tag:focus {
+    outline: 2px solid var(--color-primary);
+  }
+}
