@@ -12451,11 +12451,6 @@ h1, h2, h3, h4 {
   --heading-font-weight: 700;
 }
 
-h1 {
-  font-size: var(--text-xxxxl);
-  text-transform: uppercase;
-}
-
 .font-primary {
   font-family: var(--font-primary);
 }
