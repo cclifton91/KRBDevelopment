@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .container {
   width: calc(100% - 2 * var(--component-padding));
   margin-left: auto;
@@ -2450,8 +2451,8 @@ img, video, svg {
 }
 
 [data-theme] {
-  background-color: var(--color-bg, hsl(0deg, 0%, 100%));
-  color: var(--color-contrast-high, hsl(210deg, 7%, 21%));
+  background-color: var(--color-bg, hsl(0, 0%, 100%));
+  color: var(--color-contrast-high, hsl(210, 7%, 21%));
 }
 
 :root {
@@ -2511,12 +2512,12 @@ img, video, svg {
 body {
   font-size: var(--text-base-size, 1rem);
   font-family: var(--font-primary, sans-serif);
-  color: var(--color-contrast-high, hsl(210deg, 7%, 21%));
+  color: var(--color-contrast-high, hsl(210, 7%, 21%));
   font-weight: var(--body-font-weight, normal);
 }
 
 h1, h2, h3, h4 {
-  color: var(--color-contrast-higher, hsl(204deg, 28%, 7%));
+  color: var(--color-contrast-higher, hsl(204, 28%, 7%));
   line-height: var(--heading-line-height, 1.2);
   font-weight: var(--heading-font-weight, 700);
 }
@@ -2542,7 +2543,7 @@ small {
 }
 
 a, .link {
-  color: var(--color-primary, hsl(250deg, 84%, 54%));
+  color: var(--color-primary, hsl(250, 84%, 54%));
   text-decoration: underline;
 }
 
@@ -2615,11 +2616,11 @@ u {
 
 @media (min-width: 48rem) {
   .text-component__block--left,
-.text-component__block--right {
+  .text-component__block--right {
     width: 45%;
   }
   .text-component__block--left img,
-.text-component__block--right img {
+  .text-component__block--right img {
     width: 100%;
   }
   .text-component__block--left {
@@ -2767,7 +2768,7 @@ u {
 }
 
 .form-legend {
-  color: var(--color-contrast-higher, hsl(204deg, 28%, 7%));
+  color: var(--color-contrast-higher, hsl(204, 28%, 7%));
   line-height: var(--heading-line-height, 1.2);
   font-weight: var(--heading-font-weight, 700);
   font-size: var(--text-md, 1.125rem);
@@ -4955,7 +4956,6 @@ html:not(.js) .no-js\:is-hidden {
 }
 
 .position-sticky {
-  position: -webkit-sticky;
   position: sticky;
 }
 
@@ -7136,7 +7136,6 @@ html:not(.js) .no-js\:is-hidden {
     position: fixed;
   }
   .position-sticky\@xs {
-    position: -webkit-sticky;
     position: sticky;
   }
   .position-static\@xs {
@@ -8320,7 +8319,6 @@ html:not(.js) .no-js\:is-hidden {
     position: fixed;
   }
   .position-sticky\@sm {
-    position: -webkit-sticky;
     position: sticky;
   }
   .position-static\@sm {
@@ -9504,7 +9502,6 @@ html:not(.js) .no-js\:is-hidden {
     position: fixed;
   }
   .position-sticky\@md {
-    position: -webkit-sticky;
     position: sticky;
   }
   .position-static\@md {
@@ -10688,7 +10685,6 @@ html:not(.js) .no-js\:is-hidden {
     position: fixed;
   }
   .position-sticky\@lg {
-    position: -webkit-sticky;
     position: sticky;
   }
   .position-static\@lg {
@@ -11872,7 +11868,6 @@ html:not(.js) .no-js\:is-hidden {
     position: fixed;
   }
   .position-sticky\@xl {
-    position: -webkit-sticky;
     position: sticky;
   }
   .position-static\@xl {
@@ -12065,54 +12060,54 @@ html:not(.js) .no-js\:is-hidden {
   }
 }
 :root, [data-theme=default] {
-  --color-primary-darker: hsl(250, 84%, 38%);
-  --color-primary-darker-h: 250;
-  --color-primary-darker-s: 84%;
-  --color-primary-darker-l: 38%;
-  --color-primary-dark: hsl(250, 84%, 46%);
-  --color-primary-dark-h: 250;
-  --color-primary-dark-s: 84%;
-  --color-primary-dark-l: 46%;
-  --color-primary: hsl(250, 84%, 54%);
-  --color-primary-h: 250;
-  --color-primary-s: 84%;
-  --color-primary-l: 54%;
-  --color-primary-light: hsl(250, 84%, 60%);
-  --color-primary-light-h: 250;
-  --color-primary-light-s: 84%;
-  --color-primary-light-l: 60%;
-  --color-primary-lighter: hsl(250, 84%, 67%);
-  --color-primary-lighter-h: 250;
-  --color-primary-lighter-s: 84%;
-  --color-primary-lighter-l: 67%;
-  --color-accent-darker: hsl(342, 89%, 38%);
-  --color-accent-darker-h: 342;
-  --color-accent-darker-s: 89%;
-  --color-accent-darker-l: 38%;
-  --color-accent-dark: hsl(342, 89%, 43%);
-  --color-accent-dark-h: 342;
-  --color-accent-dark-s: 89%;
-  --color-accent-dark-l: 43%;
-  --color-accent: hsl(342, 89%, 48%);
-  --color-accent-h: 342;
-  --color-accent-s: 89%;
-  --color-accent-l: 48%;
-  --color-accent-light: hsl(342, 89%, 56%);
-  --color-accent-light-h: 342;
-  --color-accent-light-s: 89%;
-  --color-accent-light-l: 56%;
-  --color-accent-lighter: hsl(342, 89%, 62%);
-  --color-accent-lighter-h: 342;
-  --color-accent-lighter-s: 89%;
-  --color-accent-lighter-l: 62%;
-  --color-black: hsl(231, 15%, 9%);
-  --color-black-h: 231;
-  --color-black-s: 15%;
+  --color-primary-darker: hsl(16, 59%, 10%);
+  --color-primary-darker-h: 16;
+  --color-primary-darker-s: 59%;
+  --color-primary-darker-l: 10%;
+  --color-primary-dark: hsl(16, 59%, 16%);
+  --color-primary-dark-h: 16;
+  --color-primary-dark-s: 59%;
+  --color-primary-dark-l: 16%;
+  --color-primary: hsl(16, 59%, 22%);
+  --color-primary-h: 16;
+  --color-primary-s: 59%;
+  --color-primary-l: 22%;
+  --color-primary-light: hsl(16, 59%, 28%);
+  --color-primary-light-h: 16;
+  --color-primary-light-s: 59%;
+  --color-primary-light-l: 28%;
+  --color-primary-lighter: hsl(16, 59%, 34%);
+  --color-primary-lighter-h: 16;
+  --color-primary-lighter-s: 59%;
+  --color-primary-lighter-l: 34%;
+  --color-accent-darker: hsl(47, 65%, 42%);
+  --color-accent-darker-h: 47;
+  --color-accent-darker-s: 65%;
+  --color-accent-darker-l: 42%;
+  --color-accent-dark: hsl(47, 65%, 48%);
+  --color-accent-dark-h: 47;
+  --color-accent-dark-s: 65%;
+  --color-accent-dark-l: 48%;
+  --color-accent: hsl(47, 65%, 54%);
+  --color-accent-h: 47;
+  --color-accent-s: 65%;
+  --color-accent-l: 54%;
+  --color-accent-light: hsl(47, 65%, 60%);
+  --color-accent-light-h: 47;
+  --color-accent-light-s: 65%;
+  --color-accent-light-l: 60%;
+  --color-accent-lighter: hsl(47, 65%, 66%);
+  --color-accent-lighter-h: 47;
+  --color-accent-lighter-s: 65%;
+  --color-accent-lighter-l: 66%;
+  --color-black: hsl(230, 13%, 9%);
+  --color-black-h: 230;
+  --color-black-s: 13%;
   --color-black-l: 9%;
-  --color-white: hsl(0, 0%, 100%);
-  --color-white-h: 0;
-  --color-white-s: 0%;
-  --color-white-l: 100%;
+  --color-white: hsl(60, 6%, 97%);
+  --color-white-h: 60;
+  --color-white-s: 6%;
+  --color-white-l: 97%;
   --color-warning-darker: hsl(35, 79%, 48%);
   --color-warning-darker-h: 35;
   --color-warning-darker-s: 79%;
@@ -12133,86 +12128,86 @@ html:not(.js) .no-js\:is-hidden {
   --color-warning-lighter-h: 35;
   --color-warning-lighter-s: 79%;
   --color-warning-lighter-l: 82%;
-  --color-success-darker: hsl(170, 78%, 26%);
-  --color-success-darker-h: 170;
-  --color-success-darker-s: 78%;
-  --color-success-darker-l: 26%;
-  --color-success-dark: hsl(170, 78%, 31%);
-  --color-success-dark-h: 170;
-  --color-success-dark-s: 78%;
-  --color-success-dark-l: 31%;
-  --color-success: hsl(170, 78%, 36%);
-  --color-success-h: 170;
-  --color-success-s: 78%;
-  --color-success-l: 36%;
-  --color-success-light: hsl(170, 78%, 42%);
-  --color-success-light-h: 170;
-  --color-success-light-s: 78%;
-  --color-success-light-l: 42%;
-  --color-success-lighter: hsl(170, 78%, 47%);
-  --color-success-lighter-h: 170;
-  --color-success-lighter-s: 78%;
-  --color-success-lighter-l: 47%;
-  --color-error-darker: hsl(342, 89%, 38%);
-  --color-error-darker-h: 342;
+  --color-success-darker: hsl(134, 30%, 0%);
+  --color-success-darker-h: 134;
+  --color-success-darker-s: 30%;
+  --color-success-darker-l: 0%;
+  --color-success-dark: hsl(134, 30%, 8%);
+  --color-success-dark-h: 134;
+  --color-success-dark-s: 30%;
+  --color-success-dark-l: 8%;
+  --color-success: hsl(134, 30%, 15%);
+  --color-success-h: 134;
+  --color-success-s: 30%;
+  --color-success-l: 15%;
+  --color-success-light: hsl(134, 30%, 21%);
+  --color-success-light-h: 134;
+  --color-success-light-s: 30%;
+  --color-success-light-l: 21%;
+  --color-success-lighter: hsl(134, 30%, 27%);
+  --color-success-lighter-h: 134;
+  --color-success-lighter-s: 30%;
+  --color-success-lighter-l: 27%;
+  --color-error-darker: hsl(0, 89%, 0%);
+  --color-error-darker-h: 0;
   --color-error-darker-s: 89%;
-  --color-error-darker-l: 38%;
-  --color-error-dark: hsl(342, 89%, 43%);
-  --color-error-dark-h: 342;
+  --color-error-darker-l: 0%;
+  --color-error-dark: hsl(0, 89%, 8%);
+  --color-error-dark-h: 0;
   --color-error-dark-s: 89%;
-  --color-error-dark-l: 43%;
-  --color-error: hsl(342, 89%, 48%);
-  --color-error-h: 342;
+  --color-error-dark-l: 8%;
+  --color-error: hsl(0, 89%, 17%);
+  --color-error-h: 0;
   --color-error-s: 89%;
-  --color-error-l: 48%;
-  --color-error-light: hsl(342, 89%, 56%);
-  --color-error-light-h: 342;
+  --color-error-l: 17%;
+  --color-error-light: hsl(0, 89%, 23%);
+  --color-error-light-h: 0;
   --color-error-light-s: 89%;
-  --color-error-light-l: 56%;
-  --color-error-lighter: hsl(342, 89%, 62%);
-  --color-error-lighter-h: 342;
+  --color-error-light-l: 23%;
+  --color-error-lighter: hsl(0, 89%, 29%);
+  --color-error-lighter-h: 0;
   --color-error-lighter-s: 89%;
-  --color-error-lighter-l: 62%;
-  --color-bg-darker: hsl(240, 4%, 90%);
-  --color-bg-darker-h: 240;
-  --color-bg-darker-s: 4%;
-  --color-bg-darker-l: 90%;
-  --color-bg-dark: hsl(240, 4%, 95%);
-  --color-bg-dark-h: 240;
-  --color-bg-dark-s: 4%;
-  --color-bg-dark-l: 95%;
-  --color-bg: hsl(0, 0%, 100%);
+  --color-error-lighter-l: 29%;
+  --color-bg-darker: hsl(180, 1%, 16%);
+  --color-bg-darker-h: 180;
+  --color-bg-darker-s: 1%;
+  --color-bg-darker-l: 16%;
+  --color-bg-dark: hsl(0, 0%, 19%);
+  --color-bg-dark-h: 0;
+  --color-bg-dark-s: 0%;
+  --color-bg-dark-l: 19%;
+  --color-bg: hsl(0, 0%, 22%);
   --color-bg-h: 0;
   --color-bg-s: 0%;
-  --color-bg-l: 100%;
-  --color-bg-light: hsl(0, 0%, 100%);
+  --color-bg-l: 22%;
+  --color-bg-light: hsl(0, 0%, 25%);
   --color-bg-light-h: 0;
   --color-bg-light-s: 0%;
-  --color-bg-light-l: 100%;
-  --color-bg-lighter: hsl(0, 0%, 100%);
-  --color-bg-lighter-h: 0;
-  --color-bg-lighter-s: 0%;
-  --color-bg-lighter-l: 100%;
-  --color-contrast-lower: hsl(240, 4%, 85%);
-  --color-contrast-lower-h: 240;
-  --color-contrast-lower-s: 4%;
-  --color-contrast-lower-l: 85%;
-  --color-contrast-low: hsl(240, 4%, 65%);
-  --color-contrast-low-h: 240;
-  --color-contrast-low-s: 4%;
-  --color-contrast-low-l: 65%;
-  --color-contrast-medium: hsl(225, 4%, 47%);
-  --color-contrast-medium-h: 225;
-  --color-contrast-medium-s: 4%;
-  --color-contrast-medium-l: 47%;
-  --color-contrast-high: hsl(230, 7%, 23%);
-  --color-contrast-high-h: 230;
-  --color-contrast-high-s: 7%;
-  --color-contrast-high-l: 23%;
-  --color-contrast-higher: hsl(230, 13%, 9%);
-  --color-contrast-higher-h: 230;
-  --color-contrast-higher-s: 13%;
-  --color-contrast-higher-l: 9%;
+  --color-bg-light-l: 25%;
+  --color-bg-lighter: hsl(180, 1%, 28%);
+  --color-bg-lighter-h: 180;
+  --color-bg-lighter-s: 1%;
+  --color-bg-lighter-l: 28%;
+  --color-contrast-lower: hsl(180, 1%, 31%);
+  --color-contrast-lower-h: 180;
+  --color-contrast-lower-s: 1%;
+  --color-contrast-lower-l: 31%;
+  --color-contrast-low: hsl(180, 0%, 44%);
+  --color-contrast-low-h: 180;
+  --color-contrast-low-s: 0%;
+  --color-contrast-low-l: 44%;
+  --color-contrast-medium: hsl(180, 0%, 57%);
+  --color-contrast-medium-h: 180;
+  --color-contrast-medium-s: 0%;
+  --color-contrast-medium-l: 57%;
+  --color-contrast-high: hsl(180, 1%, 77%);
+  --color-contrast-high-h: 180;
+  --color-contrast-high-s: 1%;
+  --color-contrast-high-l: 77%;
+  --color-contrast-higher: hsl(180, 4%, 91%);
+  --color-contrast-higher-h: 180;
+  --color-contrast-higher-s: 4%;
+  --color-contrast-higher-l: 91%;
 }
 
 [data-theme=dark] {
@@ -12352,8 +12347,8 @@ html:not(.js) .no-js\:is-hidden {
   --color-contrast-low-h: 240;
   --color-contrast-low-s: 3%;
   --color-contrast-low-l: 41%;
-  --color-contrast-medium: hsl(231, 3%, 57%);
-  --color-contrast-medium-h: 231;
+  --color-contrast-medium: hsl(213, 3%, 57%);
+  --color-contrast-medium-h: 213;
   --color-contrast-medium-s: 3%;
   --color-contrast-medium-l: 57%;
   --color-contrast-high: hsl(240, 5%, 82%);
@@ -12419,12 +12414,14 @@ html:not(.js) .no-js\:is-hidden {
 }
 
 :root {
-  --font-primary: system-ui, sans-serif;
+  --font-primary: "Questrial", sans-serif;
+  --font-secondary: Regular 400 at 48px Whereas a common understanding of these rights and freedoms is Regular 400 at 36px No one shall be held in slavery or servitude slavery and the slave trade shall be prohibited in all their forms. Regular 400 at 32px Everyone has the right to an effective remedy by the competent national tribunals for acts violating the fundamental rights granted him by the constitution or by law. Regular 400 at 21px No one shall be subjected to arbitrary arrest, detention or exile. Everyone is entitled in full equality to a fair and public hearing by an independent and impartial tribunal, in the determination of his rights and obligations and of any criminal charge against him. No one shall be subjected to arbitrary interference with his privacy, family, home or correspondence, nor to attacks upon his honour and reputation. Everyone has the right to the protection of the law against such interference or attacks. Regular 400 at 16px Everyone has the right to freedom of thought, conscience and religion this right includes freedom to change his religion or belief, and freedom, either alone or in community with others and in public or private, to manifest his religion or belief in teaching, practice, worship and observance. Everyone has the right to freedom of opinion and expression this right includes freedom to hold opinions without interference and to seek, receive and impart information and ideas through any media and regardless of frontiers. Everyone has the right to rest and leisure, including reasonable limitation of working hours and periodic holidays with pay. Choosing type When you have some text, how can you choose a typeface? Many people—professional designers included—go through an app’s font menu until we find one we like. But the aim of this module is to show that there are many considerations that can improve our type choices. By setting some useful constraints to aid our type selection, we can also develop a critical eye for analyzing type along the way. A checklist for choosing type Emotive considerations for choosing typefaces Choosing reliable typefaces Exploring typefaces with multiple weights or grades Exploring width in type Choosing typefaces that have optical sizes Pairing typefaces Pairing typefaces within a family & superfamily Pairing typefaces by the same type designer or type foundry Pairing typefaces using the font matrix Exploring x-height & the em square Adding fonts to Google Docs and Slides Google Fonts is a library of 1562 open source font families and APIs for convenient use via CSS and Android. The library also has delightful and beautifully crafted icons for common actions and items. Download them for use in your digital products for Android, iOS, and web. Fonts Icons About us Featured Noto Fonts Knowledge Fonts GitHub Icons GitHub Material Design Google Design Twitter Fonts blog Privacy Terms of service Selected families Review Montserrat Questrial Use on the web To embed a font, copy the code into the <head> of your html <link> @import <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300400700&family=Questrial&display=swap" rel="stylesheet"> CSS rules to specify families "Montserrat", sans-serif;
   --text-base-size: 1rem;
   --text-scale-ratio: 1.2;
   --body-line-height: 1.4;
   --heading-line-height: 1.2;
   --font-primary-capital-letter: 1;
+  --font-secondary-capital-letter: 1;
   --text-unit: var(--text-base-size);
 }
 
@@ -12445,8 +12442,21 @@ html:not(.js) .no-js\:is-hidden {
     --text-scale-ratio: 1.215;
   }
 }
+body {
+  font-family: var(--font-secondary);
+}
+
 h1, h2, h3, h4 {
+  font-family: var(--font-primary);
   --heading-font-weight: 700;
+}
+
+.font-primary {
+  font-family: var(--font-primary);
+}
+
+.font-secondary {
+  font-family: var(--font-secondary);
 }
 
 html {
@@ -12511,13 +12521,14 @@ mark {
   cursor: pointer;
   text-decoration: none;
   line-height: 1.2;
-  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   transition: all 0.2s ease;
   will-change: transform;
 }
-.btn:focus-visible {
+.btn:focus {
+  box-shadow: 0px 0px 0px 2px var(--color-bg), 0px 0px 0px 4px hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.15);
   outline: none;
-  box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 4px hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.15);
 }
 .btn:active {
   transform: translateY(2px);
@@ -12525,41 +12536,41 @@ mark {
 
 .btn--primary {
   background: var(--color-primary);
-  box-shadow: inset 0 1px 0 hsla(var(--color-white-h), var(--color-white-s), var(--color-white-l), 0.15), 0 1px 3px hsla(var(--color-primary-darker-h), var(--color-primary-darker-s), var(--color-primary-darker-l), 0.25), 0 2px 6px hsla(var(--color-primary-darker-h), var(--color-primary-darker-s), var(--color-primary-darker-l), 0.1), 0 6px 10px -2px hsla(var(--color-primary-darker-h), var(--color-primary-darker-s), var(--color-primary-darker-l), 0.25);
   color: var(--color-white);
+  box-shadow: inset 0px 1px 0px hsla(var(--color-white-h), var(--color-white-s), var(--color-white-l), 0.15), 0px 1px 3px hsla(var(--color-primary-darker-h), var(--color-primary-darker-s), var(--color-primary-darker-l), 0.25), 0px 2px 6px hsla(var(--color-primary-darker-h), var(--color-primary-darker-s), var(--color-primary-darker-l), 0.1), 0px 6px 10px -2px hsla(var(--color-primary-darker-h), var(--color-primary-darker-s), var(--color-primary-darker-l), 0.25);
 }
 .btn--primary:hover {
   background: var(--color-primary-light);
-  box-shadow: inset 0 1px 0 hsla(var(--color-white-h), var(--color-white-s), var(--color-white-l), 0.15), 0 1px 2px hsla(var(--color-primary-darker-h), var(--color-primary-darker-s), var(--color-primary-darker-l), 0.25), 0 1px 4px hsla(var(--color-primary-darker-h), var(--color-primary-darker-s), var(--color-primary-darker-l), 0.1), 0 3px 6px -2px hsla(var(--color-primary-darker-h), var(--color-primary-darker-s), var(--color-primary-darker-l), 0.25);
+  box-shadow: inset 0px 1px 0px hsla(var(--color-white-h), var(--color-white-s), var(--color-white-l), 0.15), 0px 1px 2px hsla(var(--color-primary-darker-h), var(--color-primary-darker-s), var(--color-primary-darker-l), 0.25), 0px 1px 4px hsla(var(--color-primary-darker-h), var(--color-primary-darker-s), var(--color-primary-darker-l), 0.1), 0px 3px 6px -2px hsla(var(--color-primary-darker-h), var(--color-primary-darker-s), var(--color-primary-darker-l), 0.25);
 }
-.btn--primary:focus-visible {
-  box-shadow: inset 0 1px 0 hsla(var(--color-white-h), var(--color-white-s), var(--color-white-l), 0.15), 0 1px 2px hsla(var(--color-primary-darker-h), var(--color-primary-darker-s), var(--color-primary-darker-l), 0.25), 0 1px 4px hsla(var(--color-primary-darker-h), var(--color-primary-darker-s), var(--color-primary-darker-l), 0.1), 0 3px 6px -2px hsla(var(--color-primary-darker-h), var(--color-primary-darker-s), var(--color-primary-darker-l), 0.25), 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-primary);
+.btn--primary:focus {
+  box-shadow: inset 0px 1px 0px hsla(var(--color-white-h), var(--color-white-s), var(--color-white-l), 0.15), 0px 1px 2px hsla(var(--color-primary-darker-h), var(--color-primary-darker-s), var(--color-primary-darker-l), 0.25), 0px 1px 4px hsla(var(--color-primary-darker-h), var(--color-primary-darker-s), var(--color-primary-darker-l), 0.1), 0px 3px 6px -2px hsla(var(--color-primary-darker-h), var(--color-primary-darker-s), var(--color-primary-darker-l), 0.25), 0px 0px 0px 2px var(--color-bg), 0px 0px 0px 4px var(--color-primary);
 }
 
 .btn--subtle {
   background: var(--color-bg-lighter);
   color: var(--color-contrast-higher);
-  box-shadow: inset 0 1px 0 hsla(var(--color-white-h), var(--color-white-s), var(--color-white-l), 0.1), 0 0 0 1px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.02), 0 0.3px 0.4px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.025), 0 1px 3px -1px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.2), 0 3.5px 6px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.12);
+  box-shadow: inset 0px 1px 0px hsla(var(--color-white-h), var(--color-white-s), var(--color-white-l), 0.1), 0px 0px 0px 1px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.02), 0px 1px 3px -1px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.2), 0px 3px 6px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.12);
 }
 .btn--subtle:hover {
   background: var(--color-bg-light);
-  box-shadow: inset 0 1px 0 hsla(var(--color-white-h), var(--color-white-s), var(--color-white-l), 0.1), 0 0 0 1px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.02), 0 0.1px 0.3px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.06), 0 1px 2px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.12), 0 1px 3px -1px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.2);
+  box-shadow: inset 0px 1px 0px hsla(var(--color-white-h), var(--color-white-s), var(--color-white-l), 0.1), 0px 0px 0px 1px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.02), 0px 1px 2px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.12), 0px 1px 3px -1px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.2);
 }
-.btn--subtle:focus-visible {
-  box-shadow: inset 0 1px 0 hsla(var(--color-white-h), var(--color-white-s), var(--color-white-l), 0.1), 0 0 0 1px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.02), 0 0.3px 0.4px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.025), 0 1px 3px -1px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.2), 0 3.5px 6px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.12), 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-contrast-high);
+.btn--subtle:focus {
+  box-shadow: inset 0px 1px 0px hsla(var(--color-white-h), var(--color-white-s), var(--color-white-l), 0.1), 0px 0px 0px 1px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.02), 0px 1px 3px -1px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.2), 0px 3px 6px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.12), 0px 0px 0px 2px var(--color-bg), 0px 0px 0px 4px var(--color-contrast-high);
 }
 
 .btn--accent {
   background: var(--color-accent);
-  color: var(--color-white);
-  box-shadow: inset 0 1px 0 hsla(var(--color-white-h), var(--color-white-s), var(--color-white-l), 0.15), 0 1px 3px hsla(var(--color-accent-darker-h), var(--color-accent-darker-s), var(--color-accent-darker-l), 0.25), 0 2px 6px hsla(var(--color-accent-darker-h), var(--color-accent-darker-s), var(--color-accent-darker-l), 0.1), 0 6px 10px -2px hsla(var(--color-accent-darker-h), var(--color-accent-darker-s), var(--color-accent-darker-l), 0.25);
+  color: var(--color-error-darker);
+  box-shadow: inset 0px 1px 0px hsla(var(--color-white-h), var(--color-white-s), var(--color-white-l), 0.15), 0px 1px 3px hsla(var(--color-accent-darker-h), var(--color-accent-darker-s), var(--color-accent-darker-l), 0.25), 0px 2px 6px hsla(var(--color-accent-darker-h), var(--color-accent-darker-s), var(--color-accent-darker-l), 0.1), 0px 6px 10px -2px hsla(var(--color-accent-darker-h), var(--color-accent-darker-s), var(--color-accent-darker-l), 0.25);
 }
 .btn--accent:hover {
   background: var(--color-accent-light);
-  box-shadow: inset 0 1px 0 hsla(var(--color-white-h), var(--color-white-s), var(--color-white-l), 0.15), 0 1px 2px hsla(var(--color-accent-darker-h), var(--color-accent-darker-s), var(--color-accent-darker-l), 0.25), 0 1px 4px hsla(var(--color-accent-darker-h), var(--color-accent-darker-s), var(--color-accent-darker-l), 0.1), 0 3px 6px -2px hsla(var(--color-accent-darker-h), var(--color-accent-darker-s), var(--color-accent-darker-l), 0.1);
+  box-shadow: inset 0px 1px 0px hsla(var(--color-white-h), var(--color-white-s), var(--color-white-l), 0.15), 0px 1px 2px hsla(var(--color-accent-darker-h), var(--color-accent-darker-s), var(--color-accent-darker-l), 0.25), 0px 1px 4px hsla(var(--color-accent-darker-h), var(--color-accent-darker-s), var(--color-accent-darker-l), 0.1), 0px 3px 6px -2px hsla(var(--color-accent-darker-h), var(--color-accent-darker-s), var(--color-accent-darker-l), 0.1);
 }
-.btn--accent:focus-visible {
-  box-shadow: inset 0 1px 0 hsla(var(--color-white-h), var(--color-white-s), var(--color-white-l), 0.15), 0 1px 2px hsla(var(--color-accent-darker-h), var(--color-accent-darker-s), var(--color-accent-darker-l), 0.25), 0 1px 4px hsla(var(--color-accent-darker-h), var(--color-accent-darker-s), var(--color-accent-darker-l), 0.1), 0 3px 6px -2px hsla(var(--color-accent-darker-h), var(--color-accent-darker-s), var(--color-accent-darker-l), 0.1), 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-accent);
+.btn--accent:focus {
+  box-shadow: inset 0px 1px 0px hsla(var(--color-white-h), var(--color-white-s), var(--color-white-l), 0.15), 0px 1px 2px hsla(var(--color-accent-darker-h), var(--color-accent-darker-s), var(--color-accent-darker-l), 0.25), 0px 1px 4px hsla(var(--color-accent-darker-h), var(--color-accent-darker-s), var(--color-accent-darker-l), 0.1), 0px 3px 6px -2px hsla(var(--color-accent-darker-h), var(--color-accent-darker-s), var(--color-accent-darker-l), 0.1), 0px 0px 0px 2px var(--color-bg), 0px 0px 0px 4px var(--color-accent);
 }
 
 .btn--disabled, .btn[disabled], .btn[readonly] {
@@ -12602,7 +12613,8 @@ mark {
 }
 .form-control:focus, .form-control:focus-within {
   background: var(--color-bg);
-  box-shadow: inset 0 0 0 1px hsla(var(--color-contrast-lower-h), var(--color-contrast-lower-s), var(--color-contrast-lower-l), 0), 0 0 0 2px var(--color-primary), var(--shadow-sm);
+  box-shadow: inset 0px 0px 0px 1px hsla(var(--color-contrast-lower-h), var(--color-contrast-lower-s), var(--color-contrast-lower-l), 0), 0px 0px 0px 2px var(--color-primary), var(--shadow-sm);
+  outline: none;
 }
 
 .form-control--disabled, .form-control[disabled], .form-control[readonly] {
@@ -12611,13 +12623,137 @@ mark {
 }
 
 .form-control[aria-invalid=true], .form-control.form-control--error {
-  box-shadow: inset 0 0 0 1px hsla(var(--color-contrast-lower-h), var(--color-contrast-lower-s), var(--color-contrast-lower-l), 0), 0 0 0 2px var(--color-error);
+  box-shadow: inset 0px 0px 0px 1px hsla(var(--color-contrast-lower-h), var(--color-contrast-lower-s), var(--color-contrast-lower-l), 0), 0px 0px 0px 2px var(--color-error);
 }
 .form-control[aria-invalid=true]:focus, .form-control[aria-invalid=true]:focus-within, .form-control.form-control--error:focus, .form-control.form-control--error:focus-within {
-  box-shadow: inset 0 0 0 1px hsla(var(--color-contrast-lower-h), var(--color-contrast-lower-s), var(--color-contrast-lower-l), 0), 0 0 0 2px var(--color-error), var(--shadow-sm);
+  box-shadow: inset 0px 0px 0px 1px hsla(var(--color-contrast-lower-h), var(--color-contrast-lower-s), var(--color-contrast-lower-l), 0), 0px 0px 0px 2px var(--color-error), var(--shadow-sm);
 }
 
 /*! purgecss start ignore */
+/* -------------------------------- 
+
+File#: _1_feature-v2
+Title: Feature v2
+Descr: Content group containing two text components
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.feature-v2__label {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: center;
+}
+.feature-v2__label::after {
+  content: "";
+  height: 1px;
+  flex-grow: 1;
+  background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.1);
+}
+
+/* -------------------------------- 
+
+File#: _1_form-validator
+Title: Form Validator
+Descr: A plugin to validate form fields
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.form-validate__error-msg {
+  display: none;
+}
+.form-validate__input-wrapper--error .form-validate__error-msg {
+  display: block;
+}
+
+/* -------------------------------- 
+
+File#: _1_hero
+Title: Hero
+Descr: A full-width callout section
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.hero {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.hero--overlay-layer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.8);
+  z-index: 1;
+}
+
+/* -------------------------------- 
+
+File#: _1_input-group
+Title: Input Group
+Descr: A group of connected form elements, distributed on a single row
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.input-group {
+  display: flex;
+}
+.input-group > * {
+  position: relative;
+}
+.input-group > *:not(:last-child):not(:first-child) {
+  border-radius: 0;
+}
+.input-group > *:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.input-group > *:first-child .select__input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.input-group > *:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group > *:last-child .select__input {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group > *:focus, .input-group *:focus-within {
+  z-index: 1;
+}
+
+.input-group__tag {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-sm);
+  background-color: var(--color-bg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-contrast-lower);
+  white-space: nowrap;
+  color: var(--color-contrast-medium);
+}
+.input-group__tag:first-child {
+  border-right-width: 0px;
+}
+.input-group__tag:last-child {
+  border-left-width: 0px;
+}
+
+/* custom select */
+.input-group .select {
+  --select-icon-size: 16px;
+  --select-icon-right-margin: var(--space-sm);
+  --select-text-icon-gap: var(--space-xxxs);
+}
+.input-group .select .input-group__tag:focus {
+  outline: 2px solid var(--color-primary);
+}
+
 /* -------------------------------- 
 
 File#: _1_list
@@ -12754,3 +12890,696 @@ Usage: codyhouse.co/license
 }
 
 /* #endregion */
+/* -------------------------------- 
+
+File#: _1_main-header
+Title: Main Header
+Descr: Accessible website navigation
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+  --header-height: 50px;
+}
+@media (min-width: 64rem) {
+  :root {
+    --header-height: 70px;
+  }
+}
+
+.header {
+  height: var(--header-height);
+  width: 100%;
+  background-color: var(--color-bg);
+  z-index: var(--z-index-header, 3);
+}
+
+.header__container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+.header__logo a, .header__logo svg, .header__logo img {
+  display: block;
+}
+
+.header__nav {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 100vh;
+  background-color: var(--color-bg);
+  box-shadow: var(--shadow-md);
+  overflow: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  display: none;
+}
+.header__nav::before {
+  content: "";
+  display: block;
+  position: sticky;
+  top: 0;
+  height: var(--header-height);
+  background: inherit;
+  border-bottom: 1px solid var(--color-contrast-lower);
+}
+
+.header__nav--is-visible {
+  display: block;
+}
+
+.header__nav-inner {
+  padding: var(--space-md);
+}
+
+.header__label {
+  font-size: var(--text-sm);
+  color: var(--color-contrast-medium);
+  margin-bottom: var(--space-sm);
+}
+
+.header__item {
+  margin-bottom: var(--space-sm);
+}
+
+.header__link {
+  font-size: var(--text-lg);
+  color: var(--color-contrast-higher);
+  text-decoration: none;
+}
+.header__link:hover, .header__link[aria-current] {
+  color: var(--color-primary);
+}
+
+.header__nav-btn {
+  font-size: var(--text-lg);
+  width: 100%;
+}
+
+.header__item--divider {
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-contrast-lower);
+}
+
+.header__trigger {
+  position: relative;
+  z-index: 2;
+}
+
+.header__trigger-icon {
+  position: relative;
+  display: block;
+  height: 2px;
+  width: 1em;
+  background-color: currentColor;
+  margin-right: var(--space-xxs);
+  transition: 0.2s;
+}
+.header__trigger-icon::before, .header__trigger-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: inherit;
+  height: inherit;
+  background-color: currentColor;
+  transition: 0.2s;
+}
+.header__trigger-icon::before {
+  transform: translateY(-5px);
+}
+.header__trigger-icon::after {
+  transform: translateY(5px);
+}
+
+.header__trigger[aria-expanded=true] .header__trigger-icon {
+  background-color: transparent;
+}
+.header__trigger[aria-expanded=true] .header__trigger-icon::before {
+  transform: rotate(45deg);
+}
+.header__trigger[aria-expanded=true] .header__trigger-icon::after {
+  transform: rotate(-45deg);
+}
+
+@media (min-width: 64rem) {
+  .header__nav {
+    position: static;
+    background-color: transparent;
+    width: auto;
+    max-height: none;
+    box-shadow: none;
+    overflow: visible;
+    overscroll-behavior: auto;
+    display: block;
+  }
+  .header__nav::before {
+    display: none;
+  }
+  .header__nav-inner {
+    padding: 0;
+  }
+  .header__label {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
+            clip-path: inset(50%);
+  }
+  .header__list {
+    display: flex;
+    align-items: center;
+  }
+  .header__item {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: var(--space-md);
+  }
+  .header__link, .header__nav-btn {
+    font-size: 1.125rem;
+  }
+  .header__item--divider {
+    height: 1em;
+    width: 1px;
+  }
+  .header__trigger {
+    display: none;
+  }
+}
+/* -------------------------------- 
+
+File#: _1_modal-window
+Title: Modal Window
+Descr: A modal dialog used to display critical information
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.modal {
+  position: fixed;
+  z-index: var(--z-index-overlay, 15);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+.modal:not(.modal--is-visible) {
+  pointer-events: none;
+  background-color: transparent;
+}
+
+.modal--is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* close buttons */
+.modal__close-btn {
+  display: flex;
+  flex-shrink: 0;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+.modal__close-btn .icon {
+  display: block;
+  margin: auto;
+}
+
+.modal__close-btn--outer { /* close button - outside the modal__content */
+  --size: 48px;
+  width: var(--size);
+  height: var(--size);
+  position: fixed;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  z-index: var(--z-index-fixed-element, 10);
+  background-color: hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.9);
+  transition: 0.2s;
+}
+.modal__close-btn--outer .icon {
+  color: var(--color-white); /* icon color */
+  transition: transform 0.3s var(--ease-out-back);
+}
+.modal__close-btn--outer:hover {
+  background-color: hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 1);
+}
+.modal__close-btn--outer:hover .icon {
+  transform: scale(1.1);
+}
+
+.modal__close-btn--inner { /* close button - inside the modal__content */
+  --size: 32px;
+  width: var(--size);
+  height: var(--size);
+  background-color: var(--color-bg-light);
+  box-shadow: var(--inner-glow), var(--shadow-sm);
+  transition: 0.2s;
+}
+.modal__close-btn--inner .icon {
+  color: inherit; /* icon color */
+}
+.modal__close-btn--inner:hover {
+  background-color: var(--color-bg-lighter);
+  box-shadow: var(--inner-glow), var(--shadow-md);
+}
+
+/* animations */
+:root {
+  --modal-transition-duration: 0.2s; /* fallback (i.e., unless specified differently in the variations 👇) */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .modal--animate-fade {
+    --modal-transition-duration: 0.2s;
+    transition: opacity var(--modal-transition-duration), background-color var(--modal-transition-duration), visibility 0s var(--modal-transition-duration);
+  }
+  .modal--animate-fade.modal--is-visible {
+    transition: opacity var(--modal-transition-duration), background-color var(--modal-transition-duration), visibility 0s;
+  }
+  .modal--animate-scale,
+  .modal--animate-translate-up,
+  .modal--animate-translate-down,
+  .modal--animate-translate-right,
+  .modal--animate-translate-left {
+    --modal-transition-duration: 0.2s;
+    transition: opacity var(--modal-transition-duration), background-color var(--modal-transition-duration), visibility 0s var(--modal-transition-duration);
+  }
+  .modal--animate-scale .modal__content,
+  .modal--animate-translate-up .modal__content,
+  .modal--animate-translate-down .modal__content,
+  .modal--animate-translate-right .modal__content,
+  .modal--animate-translate-left .modal__content {
+    will-change: transform;
+    transition: transform var(--modal-transition-duration) var(--ease-out);
+  }
+  .modal--animate-scale.modal--is-visible,
+  .modal--animate-translate-up.modal--is-visible,
+  .modal--animate-translate-down.modal--is-visible,
+  .modal--animate-translate-right.modal--is-visible,
+  .modal--animate-translate-left.modal--is-visible {
+    transition: opacity var(--modal-transition-duration), background-color var(--modal-transition-duration), visibility 0s;
+  }
+  .modal--animate-scale.modal--is-visible .modal__content,
+  .modal--animate-translate-up.modal--is-visible .modal__content,
+  .modal--animate-translate-down.modal--is-visible .modal__content,
+  .modal--animate-translate-right.modal--is-visible .modal__content,
+  .modal--animate-translate-left.modal--is-visible .modal__content {
+    transform: scale(1); /* reset all transformations */
+  }
+  .modal--animate-slide-up,
+  .modal--animate-slide-down,
+  .modal--animate-slide-right,
+  .modal--animate-slide-left {
+    --modal-transition-duration: 0.3s;
+    transition: opacity 0s var(--modal-transition-duration), background-color var(--modal-transition-duration), visibility 0s var(--modal-transition-duration);
+  }
+  .modal--animate-slide-up .modal__content,
+  .modal--animate-slide-down .modal__content,
+  .modal--animate-slide-right .modal__content,
+  .modal--animate-slide-left .modal__content {
+    will-change: transform;
+    transition: transform var(--modal-transition-duration) var(--ease-out);
+  }
+  .modal--animate-slide-up.modal--is-visible,
+  .modal--animate-slide-down.modal--is-visible,
+  .modal--animate-slide-right.modal--is-visible,
+  .modal--animate-slide-left.modal--is-visible {
+    transition: background-color var(--modal-transition-duration), visibility 0s;
+  }
+  .modal--animate-slide-up.modal--is-visible .modal__content,
+  .modal--animate-slide-down.modal--is-visible .modal__content,
+  .modal--animate-slide-right.modal--is-visible .modal__content,
+  .modal--animate-slide-left.modal--is-visible .modal__content {
+    transform: scale(1); /* reset all transformations */
+  }
+  /* scale */
+  .modal--animate-scale .modal__content {
+    transform: scale(0.95);
+  }
+  /* translate */
+  .modal--animate-translate-up .modal__content {
+    transform: translateY(40px);
+  }
+  .modal--animate-translate-down .modal__content {
+    transform: translateY(-40px);
+  }
+  .modal--animate-translate-right .modal__content {
+    transform: translateX(-40px);
+  }
+  .modal--animate-translate-left .modal__content {
+    transform: translateX(40px);
+  }
+  /* slide */
+  .modal--animate-slide-up .modal__content {
+    transform: translateY(100%);
+  }
+  .modal--animate-slide-down .modal__content {
+    transform: translateY(-100%);
+  }
+  .modal--animate-slide-right .modal__content {
+    transform: translateX(-100%);
+  }
+  .modal--animate-slide-left .modal__content {
+    transform: translateX(100%);
+  }
+}
+/* load content - optional */
+.modal--is-loading .modal__content {
+  visibility: hidden;
+}
+.modal--is-loading .modal__loader {
+  display: flex;
+}
+
+.modal__loader { /* loader icon */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  pointer-events: none;
+}
+
+/* --image */
+.modal-img-btn {
+  position: relative;
+  cursor: pointer;
+}
+.modal-img-btn::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0);
+  transition: background 0.2s;
+}
+.modal-img-btn:hover::after {
+  background-color: hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.7);
+}
+.modal-img-btn:hover .modal-img-btn__icon-wrapper {
+  opacity: 1;
+}
+
+.modal-img-btn__icon-wrapper {
+  position: absolute;
+  z-index: 2;
+  top: calc(50% - 24px);
+  left: calc(50% - 24px);
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.7);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.modal-img-btn__icon-wrapper .icon {
+  color: var(--color-white);
+}
+
+/* -------------------------------- 
+
+File#: _1_radios-checkboxes
+Title: Radios and Checkboxes
+Descr: Custom radio and checkbox buttons
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+  /* radios + checkboxes */
+  --checkbox-radio-size: 18px;
+  --checkbox-radio-gap: var(--space-xxs); /* gap between button and label */
+  --checkbox-radio-border-width: 1px;
+  --checkbox-radio-line-height: var(--body-line-height);
+  /* radios */
+  --radio-marker-size: 8px;
+  /* checkboxes */
+  --checkbox-marker-size: 12px;
+  --checkbox-radius: 4px;
+}
+
+/* hide native buttons */
+.radio,
+.checkbox {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  margin-top: calc((1em * var(--checkbox-radio-line-height) - var(--checkbox-radio-size)) / 2);
+  opacity: 0;
+  height: var(--checkbox-radio-size);
+  width: var(--checkbox-radio-size);
+  pointer-events: none;
+}
+
+/* label */
+.radio + label,
+.checkbox + label {
+  display: inline-block;
+  line-height: var(--checkbox-radio-line-height);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  padding-left: calc(var(--checkbox-radio-size) + var(--checkbox-radio-gap));
+}
+
+/* custom inputs - basic style */
+.radio + label::before,
+.checkbox + label::before {
+  content: "";
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  top: -0.1em;
+  margin-left: calc(-1 * (var(--checkbox-radio-size) + var(--checkbox-radio-gap)));
+  flex-shrink: 0;
+  width: var(--checkbox-radio-size);
+  height: var(--checkbox-radio-size);
+  background-color: var(--color-bg);
+  border-width: var(--checkbox-radio-border-width);
+  border-color: hsla(var(--color-contrast-low-h), var(--color-contrast-low-s), var(--color-contrast-low-l), 0.65);
+  border-style: solid;
+  box-shadow: var(--shadow-xs);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: var(--checkbox-radio-gap);
+  transition: transform 0.2s, border 0.2s;
+}
+
+/* :hover */
+.radio:not(:checked):not(:focus) + label:hover::before,
+.checkbox:not(:checked):not(:focus) + label:hover::before {
+  border-color: hsla(var(--color-contrast-low-h), var(--color-contrast-low-s), var(--color-contrast-low-l), 1);
+}
+
+/* radio only style */
+.radio + label::before {
+  border-radius: 50%;
+}
+
+/* checkbox only style */
+.checkbox + label::before {
+  border-radius: var(--checkbox-radius);
+}
+
+/* :checked */
+.radio:checked + label::before,
+.checkbox:checked + label::before {
+  background-color: var(--color-primary);
+  box-shadow: var(--shadow-xs);
+  border-color: var(--color-primary);
+  transition: transform 0.2s;
+}
+
+/* :active */
+.radio:active + label::before,
+.checkbox:active + label::before {
+  transform: scale(0.8);
+  transition: transform 0.2s;
+}
+
+/* :checked:active */
+.radio:checked:active + label::before,
+.checkbox:checked:active + label::before {
+  transform: none;
+  transition: none;
+}
+
+/* radio button icon */
+.radio:checked + label::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cg class='nc-icon-wrapper' fill='%23ffffff'%3E%3Ccircle cx='8' cy='8' r='8' fill='%23ffffff'%3E%3C/circle%3E%3C/g%3E%3C/svg%3E");
+  background-size: var(--radio-marker-size);
+}
+
+/* checkbox button icon */
+.checkbox:checked + label::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpolyline points='1 6.5 4 9.5 11 2.5' fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/svg%3E");
+  background-size: var(--checkbox-marker-size);
+}
+
+/* :focus */
+.radio:checked:active + label::before,
+.checkbox:checked:active + label::before,
+.radio:focus + label::before,
+.checkbox:focus + label::before {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2);
+}
+
+/* --radio--bg, --checkbox--bg -> variation with background color */
+.radio--bg + label, .checkbox--bg + label {
+  padding: var(--space-xxxxs) var(--space-xxxs);
+  padding-left: calc(var(--checkbox-radio-size) + var(--checkbox-radio-gap) + var(--space-xxxs));
+  border-radius: var(--radius-md);
+  transition: background 0.2s;
+}
+
+.radio--bg + label:hover, .checkbox--bg + label:hover {
+  background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.075);
+}
+
+.radio--bg:active + label,
+.checkbox--bg:active + label,
+.radio--bg:focus + label,
+.checkbox--bg:focus + label {
+  background-color: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.1);
+}
+
+/* -------------------------------- 
+
+File#: _2_form-template
+Title: Form Template
+Descr: Form template example
+Usage: codyhouse.co/license
+
+-------------------------------- */
+/* -------------------------------- 
+
+File#: _2_morphing-image-modal
+Title: Morphing Image Modal
+Descr: An image morphing into a modal window, showing additional details
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+  --morph-img-modal-transition-duration: .35s;
+}
+
+.morph-img-modal.modal {
+  --modal-transition-duration: var(--morph-img-modal-transition-duration);
+}
+.morph-img-modal::before {
+  display: none;
+  content: "mobile";
+}
+
+.morph-img-modal__content {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+.morph-img-modal__img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.morph-img-modal__info {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  transition: opacity 0.2s;
+}
+
+.morph-img-bg, .morph-img-clone {
+  position: fixed;
+  z-index: var(--z-index-overlay, 15);
+  transform-origin: left top;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.morph-img-clone {
+  overflow: hidden;
+}
+.morph-img-clone svg, .morph-img-clone rect, .morph-img-clone image {
+  height: 100%;
+  width: 100%;
+}
+
+.morph-img-close-btn {
+  position: fixed;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  z-index: var(--z-index-overlay, 15);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.9);
+  flex-shrink: 0;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: background 0.2s, opacity var(--morph-img-modal-transition-duration), visibility 0s var(--morph-img-modal-transition-duration);
+}
+.morph-img-close-btn:hover {
+  background-color: hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 1);
+}
+.morph-img-close-btn .icon {
+  color: var(--color-white);
+  display: block;
+  margin: auto;
+}
+
+.morph-img-close-btn--is-visible {
+  opacity: 1;
+  visibility: visible;
+  transition: background 0.2s, opacity var(--morph-img-modal-transition-duration);
+}
+
+@media (min-width: 64rem) {
+  .morph-img-modal {
+    padding: 0 var(--space-md);
+  }
+  .morph-img-modal::before {
+    content: "dekstop";
+  }
+  .morph-img-modal__content {
+    height: calc(100% - 96px - var(--space-md) * 2);
+    max-height: 680px;
+    overflow: hidden;
+    display: flex;
+  }
+  .morph-img-modal__content > * {
+    flex-basis: 50%;
+    height: 100%;
+    max-height: 100%;
+    min-width: 0;
+  }
+  .morph-img-bg {
+    background-image: linear-gradient(to right, transparent 0 30%, var(--color-bg) 30% 100%);
+  }
+}
