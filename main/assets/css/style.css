@@ -12415,7 +12415,7 @@ html:not(.js) .no-js\:is-hidden {
 
 :root {
   --font-primary: "Questrial", sans-serif;
-  --font-secondary: Regular 400 at 48px Whereas a common understanding of these rights and freedoms is Regular 400 at 36px No one shall be held in slavery or servitude slavery and the slave trade shall be prohibited in all their forms. Regular 400 at 32px Everyone has the right to an effective remedy by the competent national tribunals for acts violating the fundamental rights granted him by the constitution or by law. Regular 400 at 21px No one shall be subjected to arbitrary arrest, detention or exile. Everyone is entitled in full equality to a fair and public hearing by an independent and impartial tribunal, in the determination of his rights and obligations and of any criminal charge against him. No one shall be subjected to arbitrary interference with his privacy, family, home or correspondence, nor to attacks upon his honour and reputation. Everyone has the right to the protection of the law against such interference or attacks. Regular 400 at 16px Everyone has the right to freedom of thought, conscience and religion this right includes freedom to change his religion or belief, and freedom, either alone or in community with others and in public or private, to manifest his religion or belief in teaching, practice, worship and observance. Everyone has the right to freedom of opinion and expression this right includes freedom to hold opinions without interference and to seek, receive and impart information and ideas through any media and regardless of frontiers. Everyone has the right to rest and leisure, including reasonable limitation of working hours and periodic holidays with pay. Choosing type When you have some text, how can you choose a typeface? Many people—professional designers included—go through an app’s font menu until we find one we like. But the aim of this module is to show that there are many considerations that can improve our type choices. By setting some useful constraints to aid our type selection, we can also develop a critical eye for analyzing type along the way. A checklist for choosing type Emotive considerations for choosing typefaces Choosing reliable typefaces Exploring typefaces with multiple weights or grades Exploring width in type Choosing typefaces that have optical sizes Pairing typefaces Pairing typefaces within a family & superfamily Pairing typefaces by the same type designer or type foundry Pairing typefaces using the font matrix Exploring x-height & the em square Adding fonts to Google Docs and Slides Google Fonts is a library of 1562 open source font families and APIs for convenient use via CSS and Android. The library also has delightful and beautifully crafted icons for common actions and items. Download them for use in your digital products for Android, iOS, and web. Fonts Icons About us Featured Noto Fonts Knowledge Fonts GitHub Icons GitHub Material Design Google Design Twitter Fonts blog Privacy Terms of service Selected families Review Montserrat Questrial Use on the web To embed a font, copy the code into the <head> of your html <link> @import <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300400700&family=Questrial&display=swap" rel="stylesheet"> CSS rules to specify families "Montserrat", sans-serif;
+  --font-secondary: "Montserrat", sans-serif;
   --text-base-size: 1rem;
   --text-scale-ratio: 1.2;
   --body-line-height: 1.4;
@@ -12449,6 +12449,11 @@ body {
 h1, h2, h3, h4 {
   font-family: var(--font-primary);
   --heading-font-weight: 700;
+}
+
+h1 {
+  font-size: var(--text-xxxxl);
+  text-transform: uppercase;
 }
 
 .font-primary {
@@ -12910,7 +12915,6 @@ Usage: codyhouse.co/license
 .header {
   height: var(--header-height);
   width: 100%;
-  background-color: var(--color-bg);
   z-index: var(--z-index-header, 3);
 }
 
@@ -12978,7 +12982,7 @@ Usage: codyhouse.co/license
   text-decoration: none;
 }
 .header__link:hover, .header__link[aria-current] {
-  color: var(--color-primary);
+  color: var(--color-accent);
 }
 
 .header__nav-btn {

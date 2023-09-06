@@ -20,7 +20,6 @@ Usage: codyhouse.co/license
 .header {
   height: var(--header-height);
   width: 100%;
-  background-color: var(--color-bg);
   z-index: var(--z-index-header, 3); 
 }
 
@@ -97,7 +96,7 @@ Usage: codyhouse.co/license
   text-decoration: none;
 
   &:hover, &[aria-current] { // style of :hover + selected link
-    color: var(--color-primary);
+    color: var(--color-accent);
   }
 }
 
