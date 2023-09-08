@@ -49,8 +49,8 @@
     </section>
     <!--END OF HERO-->
     <!--ABOUT US-->
-    <section class="feature-v2 position-relative z-index-1 margin-y-xxl">
-      <div class="container max-width-adaptive-lg">
+    <section class="feature-v2 position-relative z-index-1 margin-y-xl">
+      <div class="container max-width-adaptive-xl">
         <p class="feature-v2__label text-sm color-contrast-low text-capitalize margin-bottom-md margin-bottom-lg@md">About Us</p>
 
         <div class="grid gap-md gap-0@md">
@@ -68,6 +68,110 @@
     </section>
     <!--END OF ABOUT US-->
     <!--PROJECTS-->
+      <ul class="grid width-100%">
+        <li class="col-12 col-3@sm">
+          <!-- aria-controls = used to trigger the modal window -->
+          <!-- data-morph-img = used to select the dynamic image info - see component info page -->
+          <figure class="cursor-pointer" aria-controls="morph-modal-id" data-morph-img="1">
+            <!-- data-modal-src = higher resolution img visible in the modal window -->
+            <img src="assets/imgs/West_Loop_Highrise.jpg" data-modal-src="assets/imgs/West_Loop_Highrise.jpg" alt="Image of highrise on west loop in chicago" style="height:560px; width:100%;">
+          </figure>
+        </li>
+
+        <li class="col-12 col-3@sm">
+          <figure class="cursor-pointer" aria-controls="morph-modal-id-1" data-morph-img="2">
+            <img src="assets/imgs/Chi_River_Walk.jpg" data-modal-src="assets/imgs/Chi_River_Walk.jpg" alt="Image Description" style="height:560px; width:100%;">
+          </figure>
+        </li>
+
+        <li class="col-12 col-3@sm">
+          <figure class="cursor-pointer" aria-controls="morph-modal-id-2" data-morph-img="3">
+            <img src="assets/imgs/PRC_Neighborhoods_Oak_Park.jpg" data-modal-src="assets/imgs/PRC_Neighborhoods_Oak_Park.jpg" alt="Image Description" style="height:560px; width:100%;">
+          </figure>
+        </li>
+
+        <li class="col-12 col-3@sm">
+          <figure class="cursor-pointer" aria-controls="morph-modal-id-3" data-morph-img="4">
+            <img src="assets/imgs/ISU_Quad.jpg" data-modal-src="assets/imgs/ISU_Quad.jpg" alt="Image Description" style="height:560px; width:100%;">
+          </figure>
+        </li>
+      </ul>
+      
+      <div class="morph-img-modal modal modal--animate-fade flex flex-center bg-black bg-opacity-90% js-morph-img-modal js-modal" id="morph-modal-id">
+        <div class="morph-img-modal__content modal__content max-width-lg bg inner-glow shadow-md opacity-0 js-morph-img-modal__content" role="alertdialog" aria-label="Image modal window">
+          <figure>
+            <img class="morph-img-modal__img js-morph-img-modal__img" src="" alt="Image Preview">
+          </figure>
+
+          <div class="morph-img-modal__info opacity-0 js-morph-img-modal__info">
+          </div>
+        </div>
+      </div>
+
+      <div class="morph-img-modal modal modal--animate-fade flex flex-center bg-black bg-opacity-90% js-morph-img-modal js-modal" id="morph-modal-id-1">
+        <div class="morph-img-modal__content modal__content max-width-lg bg inner-glow shadow-md opacity-0 js-morph-img-modal__content" role="alertdialog" aria-label="Image modal window">
+          <figure>
+            <img class="morph-img-modal__img js-morph-img-modal__img" src="" alt="Image Preview">
+          </figure>
+
+          <div class="morph-img-modal__info opacity-0 js-morph-img-modal__info">
+          </div>
+        </div>
+      </div>
+      
+      <div class="morph-img-modal modal modal--animate-fade flex flex-center bg-black bg-opacity-90% js-morph-img-modal js-modal" id="morph-modal-id-2">
+        <div class="morph-img-modal__content modal__content max-width-lg bg inner-glow shadow-md opacity-0 js-morph-img-modal__content" role="alertdialog" aria-label="Image modal window">
+          <figure>
+            <img class="morph-img-modal__img js-morph-img-modal__img" src="" alt="Image Preview">
+          </figure>
+
+          <div class="morph-img-modal__info opacity-0 js-morph-img-modal__info">
+          </div>
+        </div>
+      </div>
+      <div class="morph-img-modal modal modal--animate-fade flex flex-center bg-black bg-opacity-90% js-morph-img-modal js-modal" id="morph-modal-id-3">
+        <div class="morph-img-modal__content modal__content max-width-lg bg inner-glow shadow-md opacity-0 js-morph-img-modal__content" role="alertdialog" aria-label="Image modal window">
+          <figure>
+            <img class="morph-img-modal__img js-morph-img-modal__img" src="" alt="Image Preview">
+          </figure>
+
+          <div class="morph-img-modal__info opacity-0 js-morph-img-modal__info">
+          </div>
+        </div>
+      </div>
+
+      <div class="morph-img-bg bg is-hidden js-morph-img-bg" aria-hidden="true"></div>
+      <div class="morph-img-clone is-hidden js-morph-img-clone" aria-hidden="true"></div>
+
+      <button class="reset morph-img-close-btn js-tab-focus js-morph-img-close-btn">
+        <svg class="icon icon--sm" viewBox="0 0 24 24">
+          <title>Close modal window</title>
+          <g fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="3" x2="21" y2="21" />
+            <line x1="21" y1="3" x2="3" y2="21" />
+          </g>
+        </svg>
+      </button>
+    <!--END OF PROJECTS-->
+    <!--CONTACT US -->
+    <section class="feature-v2 position-relative z-index-1 margin-y-xl">
+      <div class="container max-width-adaptive-xl">
+        <p class="feature-v2__label text-sm color-contrast-low text-capitalize margin-bottom-md margin-bottom-lg@md">Contact Us</p>
+
+        <div class="grid gap-md gap-0@md">
+          <div class="col-4@md">
+            <h1 class="text-capitalize">We are hear to bring equitable stability to blighted under served communities.</h1>
+          </div>
+        
+          <div class="col-7@md offset-1@md">
+            <div class="text-component line-height-lg">
+              <p>KRB Development is here to make sure that equity and equitable stability is a part of every community.There should be a little bit more of a backstory here. Talk about how this business got started. Why you got in the business. What you are doing now and what you will be doing in the future.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--END OF CONTACT US-->
   </div>
 <script src="assets/js/scripts.js"></script>
 </body>

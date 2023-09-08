@@ -289,3 +289,63 @@
     afterEnter: false // function that runs after new content has been loaded
   };
 }());
+
+ //Loop through each modal
+//Loop through each modal
+var modals = document.querySelectorAll('.js-morph-img-modal');
+
+modals.forEach(function(morphModal) {
+  new MorphImgModal({
+    element: morphModal,
+    searchData: function(target, cb) {
+      // Determine the content based on the modal's ID
+      var modalId = morphModal.getAttribute('id');
+      var codeBlock;
+
+      switch(modalId) {
+        case 'morph-modal-id':
+          codeBlock = '<div class="text-component padding-md">' + 
+                      '<h1>Title For Modal 1</h1>' + 
+                      '<p class="color-contrast-medium">Paragraph for Modal 1</p>' + 
+                      '</div>';
+          break;
+        case 'morph-modal-id-1':
+          codeBlock = '<div class="text-component padding-md">' + 
+                      '<h1>Title For Modal 2</h1>' + 
+                      '<p class="color-contrast-medium">Paragraph for Modal 2</p>' + 
+                      '</div>';
+          break;
+        case 'morph-modal-id-2':
+          codeBlock = '<div class="text-component padding-md">' + 
+                      '<h1>Title For Modal 3</h1>' + 
+                      '<p class="color-contrast-medium">Paragraph for Modal 3</p>' + 
+                      '</div>';
+          break;
+        case 'morph-modal-id-3':
+          codeBlock = '<div class="text-component padding-md">' + 
+                      '<h1>Title For Modal 4</h1>' + 
+                      '<p class="color-contrast-medium">Paragraph for Modal 4</p>' + 
+                      '</div>';
+          break;
+        default:
+          codeBlock = '<div class="text-component padding-md">' + 
+                      '<h1>Default Title</h1>' + 
+                      '<p class="color-contrast-medium">Default Paragraph</p>' + 
+                      '</div>';
+      }
+
+      // Create a new div element
+      let newDiv = document.createElement("div");
+      newDiv.innerHTML = codeBlock;
+
+      // Convert the div to an HTML string and pass it to the callback
+      let divHtml = newDiv.outerHTML;
+      cb(divHtml);
+    },
+    afterEnter: function(target, modalInfoEl) {
+      // function that runs after the modal content has been loaded
+      // You can add custom code here if needed
+    }
+  });
+});
+
