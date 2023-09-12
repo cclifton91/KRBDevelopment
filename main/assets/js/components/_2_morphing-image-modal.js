@@ -305,20 +305,20 @@ modals.forEach(function(morphModal) {
       switch(modalId) {
         case 'morph-modal-id':
           codeBlock = '<div class="text-component padding-md">' + 
-                      '<h1>Title For Modal 1</h1>' + 
-                      '<p class="color-contrast-medium">Paragraph for Modal 1</p>' + 
+                      '<h1>Saint George</h1>' + 
+                      '<p class="color-contrast-medium">Located in Chicago\'s West Loop, this high rise features 370 condos ranging from two bedrooms to studios. Our first project to include throwbacks to Chicago\'s vintage architecture, Saint George stands out in this up and coming neighborhood. Amenities include private parking, a fitness suite, pool, and social spaces.</p>' + 
                       '</div>';
           break;
         case 'morph-modal-id-1':
           codeBlock = '<div class="text-component padding-md">' + 
-                      '<h1>Title For Modal 2</h1>' + 
-                      '<p class="color-contrast-medium">Paragraph for Modal 2</p>' + 
+                      '<h1>Sky Blue</h1>' + 
+                      '<p class="color-contrast-medium">Built in Chicago\'s bustling River District, Blue Sky features family size condos to plush studios. As beautiful as the city view, attention to detail was given to every unit such as installing black granite countertops and Brazilian cherry hardwood floors. Private parking is included as well as arooftop club room.</p>' + 
                       '</div>';
           break;
         case 'morph-modal-id-2':
           codeBlock = '<div class="text-component padding-md">' + 
-                      '<h1>Title For Modal 3</h1>' + 
-                      '<p class="color-contrast-medium">Paragraph for Modal 3</p>' + 
+                      '<h1>Mitchell Complex</h1>' + 
+                      '<p class="color-contrast-medium">Oak Park\'s downtown is experiencing a development boom, and we were the first in with the newly constructed Mitchell Complex. Oak Parks first luxury high rise. All units feature at least 1.5 bathrooms aswell as a fireplace. There are finess suites, social spaces and game rooms all locatedon the top floor for a wonderful view of Chicago\'s skyline.</p>' + 
                       '</div>';
           break;
         case 'morph-modal-id-3':

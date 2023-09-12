@@ -9,8 +9,6 @@
 </head>
 <body>
   <div class="max-width-100%">
-    <!--HERO-->
-    <section class="hero padding-y-msm min-height-100vh position-relative" style="background-image: url('assets/imgs/Hero.png')" data-theme="dark">
     <!--NAVIGATION-->
       <header class="header position-sticky top-0 js-header ">
         <div class="header__container container max-width-100%">
@@ -29,17 +27,19 @@
             <div class="header__nav-inner">
               <div class="header__label">Main menu</div>
               <ul class="header__list">
-                <li class="header__item"><a href="#0" class="header__link">Home</a></li>
-                <li class="header__item"><a href="#0" class="header__link">Company</a></li>
-                <li class="header__item"><a href="#0" class="header__link">Projects</a></li>
+                <li class="header__item"><a href="#Home" class="header__link">Home</a></li>
+                <li class="header__item"><a href="#AboutUs" class="header__link">Company</a></li>
+                <li class="header__item"><a href="#Projects" class="header__link">Projects</a></li>
                 <li class="header__item header__item--divider" aria-hidden="true"></li>
-                <li class="header__item"><a href="#0" class="header__nav-btn btn btn--primary">Contact Us</a></li>
+                <li class="header__item"><a href="#ContactUs" class="header__nav-btn btn btn--primary">Contact Us</a></li>
               </ul>
             </div>
           </nav>
         </div>
       </header>
     <!--END OF NAVIGATION-->
+    <!--HERO-->
+    <section class="hero padding-y-msm min-height-100vh position-relative" style="background-image: url('assets/imgs/Hero.png'); margin-top:-70px;" data-theme="dark" id="Home">
         <div class="container max-width-adaptive-sm position-absolute top-50% left-50% -translate-50%">
           <div class="text-component line-height-lg text-space-y-md text-center font-primary">
             <h1 class="text-xxxxl">The Sky's The Limit</h1>
@@ -49,7 +49,7 @@
     </section>
     <!--END OF HERO-->
     <!--ABOUT US-->
-    <section class="feature-v2 position-relative z-index-1 margin-y-xl">
+    <section class="feature-v2 position-relative z-index-1 margin-y-xxl"id="AboutUs">
       <div class="container max-width-adaptive-xl">
         <p class="feature-v2__label text-sm color-contrast-low text-capitalize margin-bottom-md margin-bottom-lg@md">About Us</p>
 
@@ -68,8 +68,12 @@
     </section>
     <!--END OF ABOUT US-->
     <!--PROJECTS-->
-      <ul class="grid width-100%">
-        <li class="col-12 col-3@sm">
+      <ul class="grid width-100%" id="Projects">
+        <li class="col-12 col-3@sm position-relative">
+          <div class="padding-y-sm padding-x-sm position-absolute top-0 left-0">
+              <p class="text-sm text-bold padding-bottom-xxs color-white">Project 1</p>
+              <h4>West Loop Highrise</h4>
+          </div>
           <!-- aria-controls = used to trigger the modal window -->
           <!-- data-morph-img = used to select the dynamic image info - see component info page -->
           <figure class="cursor-pointer" aria-controls="morph-modal-id" data-morph-img="1">
@@ -78,19 +82,31 @@
           </figure>
         </li>
 
-        <li class="col-12 col-3@sm">
+        <li class="col-12 col-3@sm position-relative">
+          <div class="padding-y-sm padding-x-sm position-absolute top-0 left-0">
+              <p class="text-sm text-bold padding-bottom-xxs color-white">Project 2</p>
+              <h4>Blue Sky</h4>
+          </div>
           <figure class="cursor-pointer" aria-controls="morph-modal-id-1" data-morph-img="2">
             <img src="assets/imgs/Chi_River_Walk.jpg" data-modal-src="assets/imgs/Chi_River_Walk.jpg" alt="Image Description" style="height:560px; width:100%;">
           </figure>
         </li>
 
-        <li class="col-12 col-3@sm">
+        <li class="col-12 col-3@sm position-relative">
+          <div class="padding-y-sm padding-x-sm position-absolute top-0 left-0">
+              <p class="text-sm text-bold padding-bottom-xxs color-white">Project 3</p>
+              <h4>Mitchell Complex</h4>
+          </div>
           <figure class="cursor-pointer" aria-controls="morph-modal-id-2" data-morph-img="3">
             <img src="assets/imgs/PRC_Neighborhoods_Oak_Park.jpg" data-modal-src="assets/imgs/PRC_Neighborhoods_Oak_Park.jpg" alt="Image Description" style="height:560px; width:100%;">
           </figure>
         </li>
 
-        <li class="col-12 col-3@sm">
+        <li class="col-12 col-3@sm position-relative hero--overlay-layer">
+          <div class="padding-y-sm padding-x-sm position-absolute top-0 left-0">
+              <p class="text-sm text-bold padding-bottom-xxs color-white">Coming Soon</p>
+              <h4>ISU Campus</h4>
+          </div>
           <figure class="cursor-pointer" aria-controls="morph-modal-id-3" data-morph-img="4">
             <img src="assets/imgs/ISU_Quad.jpg" data-modal-src="assets/imgs/ISU_Quad.jpg" alt="Image Description" style="height:560px; width:100%;">
           </figure>
@@ -154,7 +170,7 @@
       </button>
     <!--END OF PROJECTS-->
     <!--CONTACT US -->
-    <section class="feature-v2 position-relative z-index-1 margin-y-xl">
+    <section class="feature-v2 position-relative z-index-1 margin-y-xl" id="ContactUs">
       <div class="container max-width-adaptive-xl">
         <p class="feature-v2__label text-sm color-contrast-low text-capitalize margin-bottom-md margin-bottom-lg@md">Contact Us</p>
 
@@ -196,13 +212,13 @@
               </fieldset>
             
               <div class="text-left">
-                <button class="btn btn--primary">Submit</button>
+                <button class="btn btn--primary width-100% width-25%@md">Submit</button>
               </div>
             </form>
           </div>
         
-          <div class="col-4@md offset-1@md">
-            <div class="container flex flex-column justify-between">
+          <div class="col-4@md offset-1@md margin-top-xl margin-top-0@md">
+            <div class="flex flex-column justify-between">
               <div class="margin-bottom-lg border-bottom">
                 <span class="block padding-bottom-xs text-md text-bold">Socials</span>
                 <span class="block flex">
@@ -213,7 +229,7 @@
               </div>
               <div class="margin-bottom-lg border-bottom">
                 <span class="block padding-bottom-xs text-md text-bold">Phone Number</span>
-                <span class="block text-left padding-bottom-xxs">(1)555-5555</span>
+                <span class="block text-left padding-bottom-xxs"><a href="tel:+14047213059" class="color-accent">404-721-3059</a></span>
               </div>
               <div class="border-bottom">
                 <span class="block padding-bottom-xs text-bold text-md">Email</span>
@@ -227,12 +243,12 @@
     <!--END OF CONTACT US-->
     <!--FOOTER-->
     <section class="position-relative border-top">
-      <div class="padding-y-sm flex justify-center content-between">
+      <div class="padding-y-sm flex justify-between content-center padding-x-lg">
         <div class="text-left color-contrast-medium">
           <p class="text-sm">&copy; 2021 KRB Development Enterprise. All rights reserved.</p>
         </div>
         <div class="color-contrast-medium">
-          <p class="text-sm"> Built by <a href="#" class="color-contrast-medium"> Camille Clifton</a></p>
+          <p class="text-sm"> Made with 💜 by <a href="#" class="color-contrast-medium"> Camille Clifton</a></p>
         </div>
       </div>
     </section>
