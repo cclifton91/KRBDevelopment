@@ -149,13 +149,6 @@ var form = document.getElementById('contact-form');
 var formValidate = new FormValidator({
   element: form,
   customValidate: {
-    // custom validation functions here
-  }
-});
-
-var formValidate = new FormValidator({
-  element: form,
-  customValidate: {
     'email': function(input, callback) {
       // Regular expression for basic email validation
       var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
