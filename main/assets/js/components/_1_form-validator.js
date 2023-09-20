@@ -143,3 +143,31 @@
   };
   window.FormValidator = FormValidator;
 }());
+
+//INIT FORM VALIDATOR
+var form = document.getElementById('contact-form');
+var formValidate = new FormValidator({
+  element: form,
+  customValidate: {
+    // custom validation functions here
+  }
+});
+
+var formValidate = new FormValidator({
+  element: form,
+  customValidate: {
+    'email': function(input, callback) {
+      // Regular expression for basic email validation
+      var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+      var isValid = emailPattern.test(input.value);
+      callback(isValid); // true if valid, false otherwise
+    },
+    'phone': function(input, callback) {
+      // Regular expression for basic phone number validation
+      // This pattern matches numbers in the format: (123) 456-7890 or 123-456-7890
+      var phonePattern = /^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/;
+      var isValid = phonePattern.test(input.value);
+      callback(isValid); // true if valid, false otherwise
+    }
+  }
+});
