@@ -26,7 +26,7 @@ content:
       - { name: "instagram", label: "Instagram", type: "string",}
       - { name: "linkedin", label: "LinkedIn", type: "string",}
       - { name: "youtube", label: "Youtube", type: "string",}  
-  - name: "Home Page"
+  - name: "home"
     label: "Home Page Settings" 
     path: "src/data/homepage.json"
     type: "file"
