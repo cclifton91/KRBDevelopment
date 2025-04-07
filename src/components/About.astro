@@ -1,0 +1,22 @@
+---
+import Carousel from "./interactive/Carousel.astro"
+import data from "../data/homepage.json"
+---
+
+<section class="py-24 bg-black relative" id="about">
+	<div class="container px-4 mx-auto relative">
+		<div class="flex flex-wrap -mx-4 items-center">
+			<div class="w-full lg:w-1/2 px-4 mb-16 lg:mb-0">
+				<div class="max-w-lg mx-auto">
+					<h2 class="font-heading mb-9 text-white capitalize text-5xl lg:text-6xl">A passion for helping under resourced communities</h2>
+					<p class="leading-8 text-white mb-14">
+						{data.aboutText}
+					</p>
+				</div>
+			</div>
+			<div class="w-full lg:w-1/2 px-4">
+				<Carousel />
+			</div>
+		</div>
+	</div>
+</section>

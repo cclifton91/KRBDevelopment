@@ -1,0 +1,12 @@
+{
+  "name": "My Name",
+  "email": "my@email.com",
+  "phone": "1234567890",
+  "address": "1234 Main St, City, State, 12345",
+  "title": "CliftonCreativeStarter",
+  "description": "A starter made by Camille Clifton",
+  "url": "https://cliftoncreative.com",
+  "keywords": "CliftonCreative, Camille Clifton, CliftonCreativeStarter, CliftonCreativeStarter",
+  "ogImage": "../public/ogimage.jpg",
+  "thirdPartyScripts": ""
+}

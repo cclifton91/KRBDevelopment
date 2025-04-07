@@ -1,0 +1,161 @@
+---
+
+---
+
+<form
+	name="contact"
+	method="POST"
+	action="/thank-you"
+	netlify-honeypot="bot-field"
+	data-netlify="true"
+	x-data="{
+		firstname: '',
+		lastname: '',
+		email: '',
+		phone: '',
+		topic: '',
+		message: '',
+		errors: {},
+	
+		validateField(field) {
+			delete this.errors[field]
+	
+			switch (field) {
+				case 'firstname':
+					if (!this.firstname) this.errors.firstname = 'First Name is required'
+					break
+				case 'lastname':
+					if (!this.lastname) this.errors.lastname = 'Last Name is required'
+					break
+				case 'email':
+					if (!this.email || !this.email.includes('@')) {
+						this.errors.email = 'Valid email is required'
+					}
+					break
+				case 'phone':
+					if (!this.phone) {
+						this.errors.phone = 'Phone number is required'
+					} else {
+						const cleaned = this.phone.replace(/[^0-9]/g, '');
+						if (!(cleaned.length === 10 || (cleaned.length === 11 && cleaned.startsWith('1')))) {
+							this.errors.phone = 'Please enter a valid US phone number';
+						}
+					}
+					break
+				case 'message':
+					if (!this.message) this.errors.message = 'Message is required'
+					break
+			}
+		},
+	
+		validateForm() {
+			this.errors = {}
+	
+			if (!this.firstname) this.errors.firstname = 'First Name is required'
+			if (!this.lastname) this.errors.lastname = 'Last Name is required'
+			if (!this.email || !this.email.includes('@')) this.errors.email = 'Valid email is required'
+			if (!this.message) this.errors.message = 'Message is required'
+	
+			const cleaned = this.phone.replace(/[^0-9]/g, '');
+			if (!cleaned || !(cleaned.length === 10 || (cleaned.length === 11 && cleaned.startsWith('1')))) {
+				this.errors.phone = 'Please enter a valid US phone number'
+			}
+	
+			if (Object.keys(this.errors).length === 0) {
+				$el.submit()
+			}
+		}
+	}"
+	@submit.prevent="validateForm">
+	<input type="hidden" name="form-name" value="contact" />
+	<p class="hidden">
+		<label
+			>Don’t fill this out if you’re human:
+			<input name="bot-field" />
+		</label>
+	</p>
+
+	<!-- Name + Surname -->
+	<div class="flex flex-wrap -mx-4 mb-6">
+		<div class="w-full lg:w-1/2 px-4 mb-6 lg:mb-0">
+			<input
+				class="block w-full py-2 px-4 text-lg border-b border-gray-400 placeholder-gray-300 outline-none"
+				type="text"
+				name="firstname"
+				x-model="firstname"
+				placeholder="First Name"
+				@input="this.errors && delete this.errors.firstname"
+				@blur="validateField('firstname')"
+			/>
+			<template x-if="errors.firstname">
+				<p class="text-red-500 text-sm mt-1" x-text="errors.firstname"></p>
+			</template>
+		</div>
+		<div class="w-full lg:w-1/2 px-4">
+			<input
+				class="block w-full py-2 px-4 text-lg border-b border-gray-400 placeholder-gray-300 outline-none"
+				type="text"
+				name="lastname"
+				x-model="lastname"
+				placeholder="Last Name"
+				@input="this.errors && delete this.errors.lastname"
+				@blur="validateField('lastname')"
+			/>
+			<template x-if="errors.lastname">
+				<p class="text-red-500 text-sm mt-1" x-text="errors.lastname"></p>
+			</template>
+		</div>
+	</div>
+
+	<!-- Email + Phone -->
+	<div class="flex flex-wrap -mx-4 mb-6">
+		<div class="w-full lg:w-1/2 px-4 mb-6 lg:mb-0">
+			<input
+				class="block w-full py-2 px-4 text-lg border-b border-gray-400 placeholder-gray-300 outline-none"
+				type="email"
+				name="email"
+				x-model="email"
+				placeholder="Mail address"
+				@input="this.errors && delete this.errors.email"
+				@blur="validateField('email')"
+			/>
+			<template x-if="errors.email">
+				<p class="text-red-500 text-sm mt-1" x-text="errors.email"></p>
+			</template>
+		</div>
+		<div class="w-full lg:w-1/2 px-4">
+			<input
+				class="block w-full py-2 px-4 text-lg border-b border-gray-400 placeholder-gray-300 outline-none"
+				type="text"
+				name="phone"
+				x-model="phone"
+				placeholder="Phone number"
+				@input="this.errors && delete this.errors.phone"
+				@blur="validateField('phone')"
+			/>
+			<template x-if="errors.phone">
+				<p class="text-red-500 text-sm mt-1" x-text="errors.phone"></p>
+			</template>
+		</div>
+	</div>
+
+	<!-- Topic -->
+	<input class="block w-full mb-6 py-2 px-4 text-lg border-b border-gray-400 placeholder-gray-300 outline-none" type="text" name="topic" x-model="topic" placeholder="Form Topic" />
+
+	<!-- Message -->
+	<textarea
+		class="block w-full py-2 px-4 mb-6 text-lg border-b border-gray-400 placeholder-gray-300 outline-none resize-none"
+		name="message"
+		x-model="message"
+		cols="30"
+		rows="10"
+		placeholder="Form message"
+		@input="this.errors && delete this.errors.message"
+		@blur="validateField('message')"></textarea>
+	<template x-if="errors.message">
+		<p class="text-red-500 text-sm mt-1" x-text="errors.message"></p>
+	</template>
+
+	<!-- Submit Button -->
+	<button type="submit" class="block w-full py-3 px-8 text-black font-bold bg-yellow-600 hover:bg-yellow-700 transition duration-200" aria-label="submit form"> Send Now </button>
+</form>

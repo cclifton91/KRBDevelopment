@@ -1,0 +1,22 @@
+{
+  "name": "finalfrontier",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/alpinejs": "^0.4.3",
+    "@astrojs/sitemap": "^3.2.1",
+    "@tailwindcss/vite": "^4.0.9",
+    "@types/alpinejs": "^3.13.11",
+    "alpinejs": "^3.14.8",
+    "astro": "^5.5.2",
+    "astro-icon": "^1.1.5",
+    "astro-seo": "^0.8.4",
+    "tailwindcss": "^4.0.9"
+  }
+}

@@ -1,0 +1,51 @@
+media:
+  input: src/media
+  output: public/media
+content:
+  - name: "settings"
+    label: "Basic Settings"
+    type: "file"
+    path: "src/data/settings.json"
+    fields:
+      - { name: "name", label: "Business Name", type: "string", required: true }
+      - { name: "email", label: "Email Address", type: "string", required: true }
+      - { name: "phone", label: "Phone Number", type: "string", required: true }
+      - { name: "address", label: "Address", type: "string", required: true }
+      - { name: "title", label: "Title of Wwebsite", type: "string", required: true }
+      - { name: "description", label: "Description of Website", type: "string", required: true }
+      - { name: "url", label: "URL", type: "string", required: true }
+      - { name: "keywords", label: "Keywords", type: "string",}
+      - { name: "image", label: "OG:Image", type: "image",}
+  - name: "social"
+    label: "Social Media"
+    type: "file"
+    path: "src/data/social.json"
+    fields:
+      - { name: "facebook", label: "Facebook", type: "string",}
+      - { name: "twitter", label: "Twitter", type: "string",}
+      - { name: "instagram", label: "Instagram", type: "string",}
+      - { name: "linkedin", label: "LinkedIn", type: "string",}
+      - { name: "youtube", label: "Youtube", type: "string",}  
+  - name: "Home Page"
+    label: "Home Page Settings" 
+    path: "src/data/homepage.json"
+    type: "file"
+    fields:
+    - { name: "heroText", label: "Hero Heading", type: "text",}
+    - { name: "heroDescription", label: "Hero Description", type: "text",}
+    - { name: "heroImg", label: "Hero Image", type: "image",}
+    - { name: "aboutText", label: "About Description", type: "text",}
+    - { name: "aboutCarousel", label: "Image Slideshow", type: "image", list: true, options: { path: "src/media/carousel", extensions: [ jpg, jpeg, png ] },}
+  - name: "Bids"
+    label: "Bids" 
+    path: "src/data/bids"
+    type: "collection"
+    fields:
+    - { name: "title", label: "Title", type: "text",}
+    - { name: "description", label: "Description", type: "text", required: true }
+    - { name: "coverAlt", label: "Image Description", type: "text", required: true }
+    - { name: "cover", label: "Bid Image", type: "image", options: { path: "src/media/bids", extensions: [ jpg, jpeg, png ] },required: true }
+    
+    
+
+    

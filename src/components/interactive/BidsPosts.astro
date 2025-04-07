@@ -1,0 +1,76 @@
+---
+import { getCollection } from "astro:content"
+const bids = (await getCollection("bids")).slice(0, 4) // Only show 4
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 grid-rows-6 gap-2 h-auto md:h-screen">
+	<!-- Branding Block -->
+	<div class="text-white p-4 md:p-6 flex flex-col justify-end row-span-1 bg-yellow-600 min-h-[120px]">
+		<h1 class="capitalize font-heading text-5xl lg:text-6xl">Current Bids</h1>
+		<p class="text-xs mt-1 md:text-sm md:mt-2 hidden md:block">Current property in development</p>
+	</div>
+
+	<!-- Bid 1 -->
+	{
+		bids[0] && (
+			<div class="relative row-span-2">
+				<img src={bids[0].data.cover.src} alt={bids[0].data.coverAlt} class="w-full h-full object-cover" />
+				<div class="absolute inset-0 bg-black/40 opacity-0 hover:opacity-100 transition duration-300 flex items-end p-4">
+					<div>
+						<p class="text-sm font-bold text-white">01</p>
+						<p class="text-lg font-bold text-white">{bids[0].data.title}</p>
+						<p class="font-paragraph text-sm text-white">{bids[0].data.description}</p>
+					</div>
+				</div>
+			</div>
+		)
+	}
+
+	<!-- Bid 2 -->
+	{
+		bids[1] && (
+			<div class="relative row-span-2">
+				<img src={bids[1].data.cover.src} alt={bids[1].data.coverAlt} class="w-full h-full object-cover" />
+				<div class="absolute inset-0 bg-black/40 opacity-0 hover:opacity-100 transition duration-300 flex items-end p-4">
+					<div>
+						<p class="text-sm font-bold text-white">02</p>
+						<p class="text-lg font-bold text-white">{bids[1].data.title}</p>
+						<p class="font-paragraph text-sm text-white">{bids[1].data.description}</p>
+					</div>
+				</div>
+			</div>
+		)
+	}
+
+	<!-- Bid 3 -->
+	{
+		bids[2] && (
+			<div class="relative row-span-3">
+				<img src={bids[2].data.cover.src} alt={bids[2].data.coverAlt} class="w-full h-full object-cover" />
+				<div class="absolute inset-0 bg-black/40 opacity-0 hover:opacity-100 transition duration-300 flex items-end p-4">
+					<div>
+						<p class="text-sm font-bold text-white">03</p>
+						<p class="text-lg font-bold text-white">{bids[2].data.title}</p>
+						<p class="font-paragraph text-sm text-white">{bids[2].data.description}</p>
+					</div>
+				</div>
+			</div>
+		)
+	}
+
+	<!-- Bid 4 (stretch to bottom!) -->
+	{
+		bids[3] && (
+			<div class="relative row-span-2">
+				<img src={bids[3].data.cover.src} alt={bids[3].data.coverAlt} class="w-full h-full object-cover" />
+				<div class="absolute inset-0 bg-black/40 opacity-0 hover:opacity-100 transition duration-300 flex items-end p-4">
+					<div>
+						<p class="text-sm font-bold text-white">04</p>
+						<p class="text-lg font-bold text-white">{bids[3].data.title}</p>
+						<p class="font-paragraph text-sm text-white">{bids[3].data.description}</p>
+					</div>
+				</div>
+			</div>
+		)
+	}
+</div>

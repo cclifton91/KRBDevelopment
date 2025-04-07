@@ -1,0 +1,92 @@
+---
+import { Image } from "astro:assets"
+import { Icon } from "astro-icon/components"
+import homeData from "../../data/homepage.json"
+
+// Eagerly import all images
+const mediaImages = import.meta.glob<{ default: ImageMetadata }>("/src/media/carousel/*.{jpg,jpeg,png}", { eager: true })
+
+const resolvedImages = Object.fromEntries(Object.entries(mediaImages).map(([path, mod]) => [path, mod.default]))
+
+const slideCount = homeData.aboutCarousel.length
+---
+
+<!-- Alpine Carousel -->
+<div class="relative" x-data="carousel()" x-init="init($el.dataset.count)" data-count={slideCount}>
+	<!-- Slide Wrapper -->
+	<div class="relative overflow-hidden w-full max-w-screen-lg mx-auto">
+		<div class="flex transition-transform duration-500 ease-in-out" :style="`transform: translateX(-${activeSlide * 100}%)`">
+			{
+				homeData.aboutCarousel?.map((imageName, index) => {
+					const imagePath = `/src/media/carousel/${imageName}`
+					const image = resolvedImages[imagePath]
+					if (!image) return null
+
+					return (
+						<div class="w-full flex-shrink-0">
+							<Image src={image} alt={`Carousel image ${index + 1}`} class="w-full h-auto max-w-md mx-auto" width={400} height={300} loading="lazy" />
+						</div>
+					)
+				})
+			}
+		</div>
+	</div>
+
+	<!-- Indicators -->
+	<div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+		{
+			homeData.aboutCarousel?.map((_, index) => (
+				<div
+					set:html={`<button
+            type='button'
+            class='h-3 w-3 rounded-full'
+            x-data='{ index: ${index} }'
+            x-bind:class='activeSlide === index ? "bg-yellow-600" : "bg-gray-400"'
+            @click='setSlide(index)'
+            aria-label='Go to slide ${index + 1}'
+          ></button>`}
+				/>
+			))
+		}
+	</div>
+
+	<!-- Navigation (optional reveal later) -->
+	<div class="hidden justify-center gap-4 mt-4">
+		<button @click="prev" class="h-10 w-10 flex items-center justify-center bg-yellow-400 hover:bg-yellow-500 rounded-full">
+			<Icon name="arrow-left" class="text-white" />
+		</button>
+
+		<button @click="next" class="h-10 w-10 flex items-center justify-center bg-yellow-600 hover:bg-yellow-700 rounded-full">
+			<Icon name="arrow-right" class="text-white" />
+		</button>
+	</div>
+</div>
+
+<!-- Inline Alpine Carousel Component -->
+<script type="module">
+	document.addEventListener("alpine:init", () => {
+		Alpine.data("carousel", () => ({
+			activeSlide: 0,
+			slideCount: 1,
+			interval: null,
+
+			init(count) {
+				// Handle the parameter as a direct value instead of an object
+				this.slideCount = parseInt(count || 1)
+				this.interval = setInterval(() => {
+					this.next()
+				}, 5000)
+			},
+
+			setSlide(index) {
+				this.activeSlide = index
+			},
+			next() {
+				this.activeSlide = (this.activeSlide + 1) % this.slideCount
+			},
+			prev() {
+				this.activeSlide = (this.activeSlide - 1 + this.slideCount) % this.slideCount
+			},
+		}))
+	})
+</script>
