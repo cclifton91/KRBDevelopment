@@ -1,12 +1,11 @@
 {
-  "name": "My Name",
-  "email": "my@email.com",
+  "name": "KRB Development Enterprise",
+  "email": "ken@krbdevelopmententerprise.com",
   "phone": "1234567890",
   "address": "1234 Main St, City, State, 12345",
-  "title": "CliftonCreativeStarter",
+  "title": "KRB Development Enterprise",
   "description": "A starter made by Camille Clifton",
-  "url": "https://cliftoncreative.com",
-  "keywords": "CliftonCreative, Camille Clifton, CliftonCreativeStarter, CliftonCreativeStarter",
-  "ogImage": "../public/ogimage.jpg",
-  "thirdPartyScripts": ""
+  "url": "https://krbdevelopmententerprise.com",
+  "keywords": "Real Estate, Real Estate Development, Developer",
+  "image": "public/media/KRB Development.png"
 }
