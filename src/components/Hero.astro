@@ -2,7 +2,7 @@
 import heroInfo from "../data/homepage.json"
 import { Image } from "astro:assets"
 import { Icon } from "astro-icon/components"
-import defaultHeroImg from "../assets/heroImage.jpg"
+import defaultHeroImg from "../assets/familyhero.jpg"
 
 // Create a mapping of all images in the assets directory
 const images = import.meta.glob("../assets/*.{jpeg,jpg,png,gif}", { import: "default" })
@@ -77,7 +77,8 @@ const { heading = heroInfo.heroText, description = heroInfo.heroDescription } = 
 				<p class="leading-8 max-w-sm">{description}</p>
 			</div>
 		</div>
-		<div><Image src={heroImg} loading="eager" class="block mb-10 object-cover h-[500px]" alt="row of houses in chicago" /></div>
+		<!-- Image -->
+		<div><Image src={heroImg} loading="eager" class="block mb-10 object-cover object-top h-[600px]" alt="A family on a bench in the park" /></div>
 	</div>
 	<div class="py-72 md:py-80 absolute top-0 left-0 w-full bg-white"></div>
 	<div :class="{'block': mobileNavOpen, 'hidden': !mobileNavOpen}" class="hidden fixed top-0 left-0 bottom-0 w-3/4 max-w-xs z-50" data-config-="data-config-">
@@ -90,15 +91,16 @@ const { heading = heroInfo.heroText, description = heroInfo.heroDescription } = 
 				</button>
 			</div>
 			<div>
+				<!-- Mobile Nav -->
 				<ul>
-					<li class="py-3"><a class="inline-block font-bold hover:text-red-900" href="#">Home</a></li>
-					<li class="py-3"><a class="inline-block font-bold hover:text-red-900" href="#">About</a></li>
-					<li class="py-3"><a class="inline-block font-bold hover:text-red-900" href="#">Bids</a></li>
+					<li class="py-3"><a class="inline-block font-bold hover:text-red-900" href="#home">Home</a></li>
+					<li class="py-3"><a class="inline-block font-bold hover:text-red-900" href="#about">About</a></li>
+					<li class="py-3"><a class="inline-block font-bold hover:text-red-900" href="#bids">Bids</a></li>
 				</ul>
 			</div>
 			<div class="mt-auto">
 				<div>
-					<a class="block px-8 py-3 text-center text-white font-bold bg-yellow-600 hover:bg-yellow-700" href="#">Contact</a>
+					<a class="block px-8 py-3 text-center text-white font-bold bg-yellow-600 hover:bg-yellow-700" href="#contact">Contact</a>
 				</div>
 			</div>
 		</nav>

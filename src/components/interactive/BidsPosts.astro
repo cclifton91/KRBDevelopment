@@ -15,7 +15,7 @@ const bids = (await getCollection("bids")).slice(0, 4) // Only show 4
 		bids[0] && (
 			<div class="relative row-span-2">
 				<img src={bids[0].data.cover.src} alt={bids[0].data.coverAlt} class="w-full h-full object-cover" />
-				<div class="absolute inset-0 bg-black/40 opacity-0 hover:opacity-100 transition duration-300 flex items-end p-4">
+				<div class="absolute inset-0 bg-black/40 md:opacity-0 opacity-70 md:hover:opacity-100 transition duration-300 flex items-end p-4">
 					<div>
 						<p class="text-sm font-bold text-white">01</p>
 						<p class="text-lg font-bold text-white">{bids[0].data.title}</p>
@@ -31,7 +31,7 @@ const bids = (await getCollection("bids")).slice(0, 4) // Only show 4
 		bids[1] && (
 			<div class="relative row-span-2">
 				<img src={bids[1].data.cover.src} alt={bids[1].data.coverAlt} class="w-full h-full object-cover" />
-				<div class="absolute inset-0 bg-black/40 opacity-0 hover:opacity-100 transition duration-300 flex items-end p-4">
+				<div class="absolute inset-0 bg-black/40 md:opacity-0 opacity-70 md:hover:opacity-100 transition duration-300 flex items-end p-4">
 					<div>
 						<p class="text-sm font-bold text-white">02</p>
 						<p class="text-lg font-bold text-white">{bids[1].data.title}</p>
@@ -47,7 +47,7 @@ const bids = (await getCollection("bids")).slice(0, 4) // Only show 4
 		bids[2] && (
 			<div class="relative row-span-3">
 				<img src={bids[2].data.cover.src} alt={bids[2].data.coverAlt} class="w-full h-full object-cover" />
-				<div class="absolute inset-0 bg-black/40 opacity-0 hover:opacity-100 transition duration-300 flex items-end p-4">
+				<div class="absolute inset-0 bg-black/40 md:opacity-0 opacity-70 md:hover:opacity-100 transition duration-300 flex items-end p-4">
 					<div>
 						<p class="text-sm font-bold text-white">03</p>
 						<p class="text-lg font-bold text-white">{bids[2].data.title}</p>
@@ -63,7 +63,7 @@ const bids = (await getCollection("bids")).slice(0, 4) // Only show 4
 		bids[3] && (
 			<div class="relative row-span-2">
 				<img src={bids[3].data.cover.src} alt={bids[3].data.coverAlt} class="w-full h-full object-cover" />
-				<div class="absolute inset-0 bg-black/40 opacity-0 hover:opacity-100 transition duration-300 flex items-end p-4">
+				<div class="absolute inset-0 bg-black/40 md:opacity-0 opacity-70 md:hover:opacity-100 transition duration-300 flex items-end p-4">
 					<div>
 						<p class="text-sm font-bold text-white">04</p>
 						<p class="text-lg font-bold text-white">{bids[3].data.title}</p>

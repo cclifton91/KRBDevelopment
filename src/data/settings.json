@@ -1,12 +1,12 @@
 {
-  "name": "My Name",
-  "email": "my@email.com",
-  "phone": "1234567890",
-  "address": "1234 Main St, City, State, 12345",
-  "title": "CliftonCreativeStarter",
-  "description": "A starter made by Camille Clifton",
-  "url": "https://cliftoncreative.com",
-  "keywords": "CliftonCreative, Camille Clifton, CliftonCreativeStarter, CliftonCreativeStarter",
-  "ogImage": "../public/ogimage.jpg",
+  "name": "Ken Brown",
+  "email": "ken@krbdevelopmententerprise.com",
+  "phone": "404-721-3059",
+  "address": "#3319 111 North Wabash Ave, The Garland Building, Chicago IL, 60602 ",
+  "title": "KRB Development Enterprise",
+  "description": "A real estate development company focused on building and managing high-quality properties.",
+  "url": "https://krbdevelopmententerprise.com",
+  "keywords": "KRB Development, real estate, property management, development, construction",
+  "ogImage": "../public/media/ogimage.png",
   "thirdPartyScripts": ""
 }
